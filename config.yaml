@@ -1,0 +1,56 @@
+baseURL: "https://gambitproject.github.io"
+languageCode: "en-us"
+title: "Gambit: Software Tools for Game Theory"
+theme: scientific-python-hugo-theme
+relativeURLs: true
+disableKinds: ["term", "taxonomy"]
+
+markup:
+  highlight:
+    noClasses: false
+
+params:
+  description: "The pre-eminent open source software package for computing in finite games."
+  images:
+    - /images/gambit.png
+  navbarlogo:
+    image: gambit.png
+    text: Gambit
+    link: /
+  hero:
+    title: Gambit
+    image: gambit.png
+  navbar:
+    - title: Get started
+      url: /getstarted/
+    - title: Features
+      url: /features/
+      is_external: false
+  keyfeatures:
+    features:
+      - title: Documentation
+        text: The latest documentation is at https://gambitproject.readthedocs.io.
+      - title: Releases
+        text: The current stable version of Gambit is 16.0.2.
+      - title: Development
+        text: Meet the development team.
+  footer:
+    logo: gambit.png
+    socialmediatitle: ""
+    socialmedia:
+      - link: https://twitter.com/thegambitproj
+        icon: discourse
+      - link: https://github.com/gambitproject/gambit
+        icon: github
+    quicklinks:
+      column1:
+        title: ""
+        links:
+          - text: About
+            link: /about/
+          - text: GitHub
+            link: https://github.com/gambitproject/gambit
+      column2:
+        links:
+      column3:
+        links:
