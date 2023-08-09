@@ -48,6 +48,8 @@ params:
         links:
           - text: About
             link: /about/
+          - text: Citing
+            link: /cite
           - text: GitHub
             link: https://github.com/gambitproject/gambit
       column2:
