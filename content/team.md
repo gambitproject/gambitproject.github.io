@@ -7,7 +7,7 @@ title: The Gambit development team
 **Gambit** is developed and maintained by:
 
 
-* [**Theodore Turocy**](https://tturocy.github.io) (Alan Turing Institute and University of East Anglia).
+* [**Theodore Turocy**](https://tturocy.github.io) (Alan Turing Institute and University of East Anglia)
 * [**Rahul Savani**](https://www.csc.liv.ac.uk/~rahul/) (University of Liverpool)
 * [**Yongzhao Wang**](https://sites.google.com/umich.edu/yongzhao-wang/) (Alan Turing Institute)
 
