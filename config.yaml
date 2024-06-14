@@ -26,14 +26,6 @@ params:
     - title: Features
       url: /features/
       is_external: false
-  keyfeatures:
-    features:
-      - title: Documentation
-        text: The latest documentation is at https://gambitproject.readthedocs.io.
-      - title: Releases
-        text: The current stable version of Gambit is 16.0.2.
-      - title: Development
-        text: Meet the development team.
   footer:
     logo: gambit.png
     socialmediatitle: ""
