@@ -1,6 +1,6 @@
 baseURL: "https://gambitproject.github.io"
 languageCode: "en-us"
-title: "Gambit: Software Tools for Game Theory"
+title: "Gambit: The package for computation in game theory"
 theme: scientific-python-hugo-theme
 relativeURLs: true
 disableKinds: ["term", "taxonomy"]
@@ -10,25 +10,37 @@ markup:
     noClasses: false
 
 params:
-  description: "The pre-eminent open source software package for computing in finite games."
+  navColor: red
+  description: "The package for computation in game theory."
   images:
     - /images/gambit.png
+  fonts:
+    - name: "Lato"
+      weights: [400, 900]
   navbarlogo:
     image: gambit.png
     text: Gambit
     link: /
   hero:
     title: Gambit
-    image: gambit.png
+    subtitle: The package for computation in game theory
+    image: gambit-tree.png
+    buttontext: Get started
+    buttonlink: "/install"
   navbar:
-    - title: Get started
-      url: /getstarted/
-    - title: Features
-      url: /features/
+    - title: Install
+      url: /install
+    - title: Documentation
+      url: "https://gambitproject.readthedocs.io"
+      is_external: true
+    - title: Team
+      url: /team/
+    - title: Citing
+      url: /cite/
       is_external: false
   footer:
     logo: gambit.png
-    socialmediatitle: ""
+    socialmediatitle:
     socialmedia:
       - link: https://twitter.com/thegambitproj
         icon: discourse
@@ -38,13 +50,16 @@ params:
       column1:
         title: ""
         links:
-          - text: About
-            link: /about/
-          - text: Citing
-            link: /cite
-          - text: GitHub
-            link: https://github.com/gambitproject/gambit
+          - text: Install
+            link: /install
       column2:
+        title: ""
         links:
+          - text: Documentation
+            link: "https://gambitproject.readthedocs.io"
       column3:
+        title: ""
         links:
+          - text: Team
+            link: /team
+

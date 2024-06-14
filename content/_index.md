@@ -2,27 +2,24 @@
 title:
 ---
 
-{{< grid columns="3 3 3" >}}
+**Gambit** is an open-source collection of tools for doing
+computation in game theory. With Gambit, you can build, analyze,
+and explore strategic interactions using noncooperative game theory.
 
-[[item]]
-type = 'card'
-title = 'About Gambit'
-body = 'Gambit is the package for doing computation in game theory'
+Use Gambit's graphical interface to get
+intuition about simple games, or the command-line tools and
+Python extension to support
+your world-class research and practical applications.
 
-[[item]]
-type = 'card'
-title = 'Get Gambit'
-body = '''
-The latest release of Gambit is 16.2.0.
-'''
+To learn more, you can
+[browse the documentation](https://gambitproject.readthedocs.io),
+[install Gambit](install), or
+[meet the development team](team).
 
-[[item]]
-type = 'card'
-title = 'Meet the team'
-body = '''
-Meet the Gambit development team.
-'''
-link = 'team'
+Gambit development is supported in part by
+[The Alan Turing Institute](https://www.turing.ac.uk)
+as part of its project,
+[Automated analysis of strategic interactions](https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions).
+ 
 
 
-{{< /grid >}}

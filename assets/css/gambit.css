@@ -1,0 +1,19 @@
+.hero-title {
+   font-family: "Times New Roman", Times, serif;
+   font-size: 4em;
+   color: #cc0000;
+}
+
+.hero-subtitle {
+   font-style: italic;
+   color: #cc0000;
+}
+
+button.cta-button {
+   background-color: #cc0000;
+}
+
+
+#footer {
+   background-color: #cc0000;
+}

@@ -11,7 +11,10 @@ and where you think improvements could be made.
 
 If Gambit was useful to you in writing a scientific paper, we suggest a citation of the form:
 
-McKelvey, Richard D., McLennan, Andrew M., and Turocy, Theodore L. (2023).
-Gambit: Software Tools for Game Theory, Version 16.0.2. http://www.gambit-project.org.
+Savani, Rahul and Turocy, Theodore L. (2024).
+Gambit: The package for computation in game theory, Version 16.2.0.
+https://www.gambit-project.org.
 
-Replace the version number and year as appropriate if you use a different release.
+
+Replace the version number and year as appropriate if you use a
+different release.
