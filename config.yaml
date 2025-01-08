@@ -31,7 +31,7 @@ params:
     - title: Install
       url: /install
     - title: Documentation
-      url: "https://gambitproject.readthedocs.io"
+      url: "https://gambitproject.readthedocs.io/en/stable/"
       is_external: true
     - title: Team
       url: /team/
