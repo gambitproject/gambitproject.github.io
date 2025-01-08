@@ -12,7 +12,7 @@ Python extension to support
 your world-class research and practical applications.
 
 To learn more, you can
-[browse the documentation](https://gambitproject.readthedocs.io),
+[browse the documentation](https://gambitproject.readthedocs.io/en/stable),
 [install Gambit](install), or
 [meet the development team](team).
 
