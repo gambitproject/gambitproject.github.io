@@ -4,11 +4,11 @@ title: Install Gambit
 
 ## Gambit 16.2
 
-**Gambit 16.2.0** was released on **2024-04-05**.
+**Gambit 16.2.1** was released on **2025-01-06**.
 
-* [Download](https://github.com/gambitproject/gambit/releases/tag/v16.2.0)
-* [Documentation](https://gambitproject.readthedocs.io/en/v16.2.0)
-* [PyGambit on PyPI](https://pypi.org/project/pygambit/16.2.0)
+* [Download](https://github.com/gambitproject/gambit/releases/tag/v16.2.1)
+* [Documentation](https://gambitproject.readthedocs.io/en/v16.2.1)
+* [PyGambit on PyPI](https://pypi.org/project/pygambit/16.2.1)
 
 
 ## Gambit 16.1
