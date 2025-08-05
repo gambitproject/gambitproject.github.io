@@ -1,0 +1,39 @@
+{{- $navbarLogo     := .Site.Params.navbarlogo }}
+{{- $hero           := .Site.Params.hero }}
+{{- $title          := index $hero "title" }}
+{{- $subtitle       := index $hero "subtitle" }}
+{{- $buttonText     := index $hero "buttontext" }}
+{{- $buttonLink     := index $hero "buttonlink" }}
+{{- $image          := index $hero "image" }}
+
+<section class="hero">
+  <div class="hero-container">
+      <div class="hero-content">
+          <div class="hero-title-content">
+              <div class="hero-title">
+                  {{ $title }}
+                  <img class="hero-logo" src="{{ printf "/images/%s" $image | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
+              </div>
+              <div class="flex-column">
+                  {{ with $subtitle }}
+                  <div class="hero-subtitle">
+                      {{ . }}
+                  </div>
+                  {{ end }}
+                  
+                  <!-- GitHub Stars and Forks Buttons -->
+                  <div style="margin: 20px 0; text-align: center;">
+                    <iframe src="https://ghbtns.com/github-btn.html?user=gambitproject&repo=gambit&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub Stars"></iframe>
+                    <iframe src="https://ghbtns.com/github-btn.html?user=gambitproject&repo=gambit&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub Forks"></iframe>
+                  </div>
+                  
+                  {{ if $buttonText }}
+                  <div class="hero-cta">
+                      <a href="{{ $buttonLink }}"><button class="cta-button">{{ $buttonText }}</button></a>
+                  </div>
+                  {{ end }}
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
