@@ -1,7 +1,6 @@
 name: Feature Request
 description: Suggest a new feature or improvement to the Gambit website.
-title: "[Feature]: "
-labels: ["feature"]
+labels: ["enhancement", "website"]
 body:
   - type: markdown
     attributes:
