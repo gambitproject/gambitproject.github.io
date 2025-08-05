@@ -11,5 +11,6 @@ To make changes to the website, open a pull request with your changes. The websi
 1. [Install Hugo](https://gohugo.io/installation/) on your local machine.
 2. Clone this repository to your local machine.
 3. Navigate to the repository directory in your terminal.
-4. Run the command `hugo server` to start the local development server.
-5. Open your web browser and go to `http://localhost:1313` to see your changes in action.
+4. Run `git submodule init` then `git submodule update` to initialise and update the theme submodule.
+5. Run the command `hugo server` to start the local development server.
+6. Open your web browser and go to `http://localhost:1313` to see your changes in action.
