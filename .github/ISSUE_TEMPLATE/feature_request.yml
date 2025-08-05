@@ -9,6 +9,7 @@ body:
   - type: textarea
     id: request-details
     attributes:
+      label: Requested enahancement or feature
       description: Please provide details about the feature or improvement you would like to see.
       placeholder: Describe the feature or improvement in detail.
       value: "A feature or improvement suggestion!"
