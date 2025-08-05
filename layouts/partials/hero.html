@@ -9,7 +9,7 @@
 <section class="hero">
   <div class="hero-container">
       <div class="hero-content">
-          <div class="hero-title-content">
+          <div class="hero-title-content" style="display: flex; flex-direction: column;">
               <div class="hero-title">
                   {{ $title }}
                   <img class="hero-logo" src="{{ printf "/images/%s" $image | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
@@ -23,8 +23,9 @@
                   
                   <!-- GitHub Stars and Forks Buttons -->
                   <div style="margin: 20px 0; text-align: center;">
-                    <iframe src="https://ghbtns.com/github-btn.html?user=gambitproject&repo=gambit&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub Stars"></iframe>
-                    <iframe src="https://ghbtns.com/github-btn.html?user=gambitproject&repo=gambit&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub Forks"></iframe>
+                    <a class="github-button" href="https://github.com/gambitproject/gambit" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star gambitproject/gambit on GitHub">Star</a>
+                    <a class="github-button" href="https://github.com/gambitproject/gambit/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork gambitproject/gambit on GitHub">Fork</a>
+                    <script async defer src="https://buttons.github.io/buttons.js"></script>
                   </div>
                   
                   {{ if $buttonText }}
