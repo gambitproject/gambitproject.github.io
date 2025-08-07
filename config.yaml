@@ -41,6 +41,19 @@ params:
       - name: LLM tools
         description: "🏗️ Construct and analyse extensive games using large language models."
         icon: llm.png
+    capabilities:
+      - name: Computing Nash equilibria
+        description: "Compute Nash equilibria for extensive games."
+        icon: nash.png
+      - name: Capability 2
+        description: "Description for capability 2."
+        icon: capability2.png
+      - name: Capability 3
+        description: "Description for capability 3."
+        icon: capability3.png
+      - name: Capability 4
+        description: "Description for capability 4."
+        icon: capability4.png
   navbar:
     - title: Install
       url: /install
