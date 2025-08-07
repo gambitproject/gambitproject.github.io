@@ -1,0 +1,57 @@
+{{- $title := .Site.Params.title }}
+{{- $navbar := .Site.Params.navbar }}
+{{- $navbarLogo := .Site.Params.navbarlogo }}
+<nav id="nav" class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            {{- if or (not .IsHome) (not .Site.Params.hero) }}
+            {{- if $navbarLogo}}
+            <a class="navbar-item" href="{{ $navbarLogo.link }}">
+                {{- with $navbarLogo.image }}
+                <img class="navbar-logo" src="{{ printf " /images/%s" . | relURL }}" alt="{{ default (printf " %s logo"
+                    $title) $navbarLogo.altText }}">
+                {{- end }}
+                <div class="navbar-logo-text">{{ default "" $navbarLogo.text }}</div>
+            </a>
+            {{- end}}
+            {{- end }}
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbar-menu" class="navbar-menu">
+
+            <div class="navbar-end">
+                {{- range $navbar }}
+                {{- if .sublinks }}
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link">
+                        {{ .title }}
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        {{- range .sublinks }}
+                        <a href="{{ .url }}" class="navbar-item">
+                            {{ .title }}
+                        </a>
+                        {{- end }}
+                    </div>
+                </div>
+                {{- else }}
+                <a href="{{ .url }}" class="navbar-item">
+                    {{ .title }}
+                </a>
+                {{- end }}
+                {{- end }}
+
+                {{- if .IsTranslated }}
+                {{ partial "translation.html" . }}
+                {{- end }}
+            </div>
+        </div>
+    </div>
+</nav>
