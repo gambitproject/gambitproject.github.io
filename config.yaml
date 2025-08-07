@@ -11,7 +11,6 @@ markup:
 
 params:
   navColor: red
-  description: "The package for computation in game theory."
   images:
     - /images/gambit.png
   fonts:
@@ -22,7 +21,7 @@ params:
     link: /
   hero:
     title: Gambit
-    subtitle: The package for computation in game theory
+    subtitle: Software tools for game theory.
     image: gambit.png
     buttontext: Get started
     buttonlink: "/install"
