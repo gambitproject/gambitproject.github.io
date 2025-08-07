@@ -11,6 +11,8 @@
    font-size: 3em;
    font-family: "Computer Modern", serif;
    max-width: 100%;
+   text-align: center;
+   margin: 0 auto;
 }
 
 /* GitHub buttons container */
