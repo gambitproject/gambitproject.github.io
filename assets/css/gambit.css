@@ -13,10 +13,80 @@
    max-width: 100%;
 }
 
+/* GitHub buttons container */
+.github-buttons {
+   margin: 20px 0;
+   text-align: center;
+}
+
+/* Software icons section */
+.software-icons {
+   margin: 40px 0;
+   text-align: center;
+}
+
+.software-icons h3 {
+   color: #cc0000;
+   margin-bottom: 20px;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+.software-grid {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 30px;
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.software-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   min-width: 120px;
+}
+
+.software-item a {
+   text-decoration: none;
+   color: inherit;
+}
+
+.software-icon {
+   width: 60px;
+   height: 60px;
+   margin-bottom: 10px;
+   object-fit: contain;
+}
+
+.software-icon-fallback {
+   width: 60px;
+   height: 60px;
+   margin-bottom: 10px;
+   background-color: #cc0000;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   font-weight: bold;
+}
+
+.software-name {
+   font-weight: bold;
+   color: #cc0000;
+   margin-bottom: 5px;
+}
+
+.software-description {
+   font-size: 0.9em;
+   color: #666;
+}
+
 button.cta-button {
    background-color: #cc0000;
 }
-
 
 #footer {
    background-color: #cc0000;

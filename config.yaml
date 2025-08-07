@@ -25,6 +25,22 @@ params:
     image: gambit.png
     buttontext: Get started
     buttonlink: "/install"
+    software:
+      - name: PyGambit
+        description: "PyGambit Python API"
+        icon: python.png
+        link: "https://gambitproject.readthedocs.io/en/stable/gui.html"
+      - name: Gambit GUI
+        description: "Gambit GUI"
+        icon: gui.png
+        link: "https://gambitproject.readthedocs.io/en/stable/pygambit.html"
+      - name: CLI
+        description: "Command-line tools"
+        icon: cli.png
+        link: "https://gambitproject.readthedocs.io/en/stable/tools.html"
+      - name: LLM
+        description: "LLM tools (WIP)"
+        icon: llm.png
   navbar:
     - title: Install
       url: /install

@@ -23,7 +23,7 @@
                   {{ end }}
                   
                   <!-- GitHub Stars and Forks Buttons -->
-                  <div style="margin: 20px 0; text-align: center;">
+                  <div class="github-buttons">
                     <a class="github-button" href="https://github.com/gambitproject/gambit" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star gambitproject/gambit on GitHub">Star</a>
                     <a class="github-button" href="https://github.com/gambitproject/gambit/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork gambitproject/gambit on GitHub">Fork</a>
                     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -34,6 +34,33 @@
                       <a href="{{ $buttonLink }}"><button class="cta-button">{{ $buttonText }}</button></a>
                   </div>
                   {{ end }}
+                  
+                  <!-- Software icons -->
+                  {{- $software := index $hero "software" }}
+                  {{ if $software }}
+                  <div class="software-icons">
+                      <div class="software-grid">
+                          {{- range $software }}
+                          <div class="software-item">
+                              {{ if .link }}
+                              <a href="{{ .link }}" aria-label="{{ .name }}">
+                              {{ end }}
+                                  {{ if .icon }}
+                                  <img src="/images/{{ .icon }}" alt="{{ .name }} icon" class="software-icon">
+                                  {{ else }}
+                                  <div class="software-icon-fallback">{{ substr .name 0 1 }}</div>
+                                  {{ end }}
+                                  <div class="software-name">{{ .name }}</div>
+                                  <div class="software-description">{{ .description }}</div>
+                              {{ if .link }}
+                              </a>
+                              {{ end }}
+                          </div>
+                          {{- end }}
+                      </div>
+                  </div>
+                  {{ end }}
+
               </div>
           </div>
       </div>
