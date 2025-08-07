@@ -21,6 +21,43 @@
    text-align: center;
 }
 
+/* Hero info section */
+.hero-info-section {
+   margin: 40px 0;
+   padding: 0 20px;
+}
+
+.info-content {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 30px;
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+.info-logo {
+   flex-shrink: 0;
+}
+
+.info-logo img {
+   width: 75%;
+   height: 75%;
+   object-fit: contain;
+}
+
+.info-text {
+   flex: 1;
+}
+
+.info-text p {
+   font-size: 1.1em;
+   line-height: 1.6;
+   color: #333;
+   margin: 0;
+   text-align: left;
+}
+
 /* Software icons section */
 .software-icons {
    margin: 40px 0;
