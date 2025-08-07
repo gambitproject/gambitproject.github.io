@@ -46,20 +46,4 @@ params:
         icon: discourse
       - link: https://github.com/gambitproject/gambit
         icon: github
-    quicklinks:
-      column1:
-        title: ""
-        links:
-          - text: Install
-            link: /install
-      column2:
-        title: ""
-        links:
-          - text: Documentation
-            link: "https://gambitproject.readthedocs.io"
-      column3:
-        title: ""
-        links:
-          - text: Team
-            link: /team
 

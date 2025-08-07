@@ -1,0 +1,31 @@
+{{- $title := .Site.Title }}
+{{- $author := .Site.Params.author.name }}
+{{- $footer := .Site.Params.footer }}
+{{- $socialMedia := index $footer "socialmedia" }}
+
+<footer id="footer">
+    <div class="container">
+        <div id="footer-columns">
+            <div class="footer-column">
+                <div class="footer-item">
+
+                </div>
+            </div>
+            <div class="footer-actions">
+                {{ partial "footer_actions.html" . }}
+                <div class="community-icons">
+                    {{- range $socialMedia }}
+                    <a href="{{ .link }}" aria-label="{{ .link }}">
+                        {{if .icon -}}
+                        {{- partial "svg-icon" .icon -}}
+                        {{- else -}}
+                        <span class="icon">ⓘ</span>
+                        {{- end }}
+                    </a>
+                    {{- end }}
+                </div>
+                <div class="copyright">&copy; {{ now.Year}} {{ $author }}. All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+</footer>
