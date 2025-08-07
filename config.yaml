@@ -19,7 +19,7 @@ params:
       weights: [400, 900]
   navbarlogo:
     image: gambit-tree.png
-    text: "Gambit: The package for computation in game theory"
+    text: "Gambit"
     link: /
   hero:
     title: Gambit
