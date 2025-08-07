@@ -5,7 +5,7 @@
 {{- $buttonText     := index $hero "buttontext" }}
 {{- $buttonLink     := index $hero "buttonlink" }}
 {{- $image          := index $hero "image" }}
-{{- $description    := .Params.description }}
+{{- $heroDescription := .Params.hero_description }}
 
 <section class="hero">
   <div class="hero-container">
@@ -43,7 +43,11 @@
                               <img src="{{ printf "/images/%s" $image | relURL }}" alt="{{ $title }} logo">
                           </div>
                           <div class="info-text">
-                              <p>{{ $description }}</p>
+                              {{ range split $heroDescription "\n\n" }}
+                              {{ if . }}
+                              <p>{{ . | markdownify | safeHTML }}</p>
+                              {{ end }}
+                              {{ end }}
                           </div>
                       </div>
                   </div>
