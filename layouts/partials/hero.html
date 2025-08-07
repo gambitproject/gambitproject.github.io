@@ -43,10 +43,8 @@
                               <img src="{{ printf "/images/%s" $image | relURL }}" alt="{{ $title }} logo">
                           </div>
                           <div class="info-text">
-                              {{ range split $heroDescription "\n\n" }}
-                              {{ if . }}
-                              <p>{{ . | markdownify | safeHTML }}</p>
-                              {{ end }}
+                              {{ range $heroDescription }}
+                              <p>{{ . }}</p><br>
                               {{ end }}
                           </div>
                       </div>
