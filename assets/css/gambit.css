@@ -1,13 +1,14 @@
 .hero-title {
-   font-family: "Times New Roman", Times, serif;
-   font-size: 4em;
-   color: #cc0000;
-}
-
-.hero-subtitle {
    color: #cc0000;
    font-weight: bold;
    font-size: 5em;
+   font-family: "Computer Modern", serif;
+   max-width: 100%;
+}
+
+.hero-subtitle {
+   color: #442020;
+   font-size: 3em;
    font-family: "Computer Modern", serif;
    max-width: 100%;
 }

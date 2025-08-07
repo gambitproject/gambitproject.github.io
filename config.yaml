@@ -20,8 +20,8 @@ params:
     image: gambit.png
     link: /
   hero:
-    title: Gambit
-    subtitle: Software tools for game theory.
+    title: Software tools for game theory.
+    subtitle: Build, analyze, and explore strategic interactions using noncooperative game theory.
     image: gambit.png
     buttontext: Get started
     buttonlink: "/install"

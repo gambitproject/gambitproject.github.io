@@ -11,6 +11,11 @@
       <div class="hero-content">
           <div class="hero-title-content" style="display: flex; flex-direction: column;">
               <div class="flex-column">
+                  {{ with $title }}
+                  <div class="hero-title">
+                      {{ . }}
+                  </div>
+                  {{ end }}
                   {{ with $subtitle }}
                   <div class="hero-subtitle">
                       {{ . }}
