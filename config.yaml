@@ -18,13 +18,12 @@ params:
     - name: "Lato"
       weights: [400, 900]
   navbarlogo:
-    image: gambit-tree.png
-    text: "Gambit"
+    image: gambit.png
     link: /
   hero:
     title: Gambit
     subtitle: The package for computation in game theory
-    image: gambit-tree.png
+    image: gambit.png
     buttontext: Get started
     buttonlink: "/install"
   navbar:
