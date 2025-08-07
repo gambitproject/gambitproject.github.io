@@ -5,7 +5,7 @@
 {{- $buttonText     := index $hero "buttontext" }}
 {{- $buttonLink     := index $hero "buttonlink" }}
 {{- $image          := index $hero "image" }}
-{{- $heroDescription := .Params.hero_description }}
+{{- $description    := index $hero "description" }}
 
 <section class="hero">
   <div class="hero-container">
@@ -43,7 +43,7 @@
                               <img src="{{ printf "/images/%s" $image | relURL }}" alt="{{ $title }} logo">
                           </div>
                           <div class="info-text">
-                              {{ range $heroDescription }}
+                              {{ range $description }}
                               <p>{{ . }}</p><br>
                               {{ end }}
                           </div>
