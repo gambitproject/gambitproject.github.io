@@ -5,8 +5,11 @@
 }
 
 .hero-subtitle {
-   font-style: italic;
    color: #cc0000;
+   font-weight: bold;
+   font-size: 5em;
+   font-family: "Computer Modern", serif;
+   max-width: 100%;
 }
 
 button.cta-button {
