@@ -10,10 +10,6 @@
   <div class="hero-container">
       <div class="hero-content">
           <div class="hero-title-content" style="display: flex; flex-direction: column;">
-              <div class="hero-title">
-                  {{ $title }}
-                  <img class="hero-logo" src="{{ printf "/images/%s" $image | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
-              </div>
               <div class="flex-column">
                   {{ with $subtitle }}
                   <div class="hero-subtitle">
