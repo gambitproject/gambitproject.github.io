@@ -164,6 +164,12 @@ nav,
   font-size: 1.2rem; /* added for better scaling */
 }
 
+/* Specifically target dropdown parent links to never show underlines */
+.navbar-item.has-dropdown .navbar-link:hover,
+.navbar-item.has-dropdown:hover .navbar-link {
+  text-decoration: none !important;
+}
+
 .navbar-burger {
   width: 8rem; /* was 4rem */
   height: 8rem; /* was 4rem */
