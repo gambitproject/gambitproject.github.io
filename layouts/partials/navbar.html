@@ -1,0 +1,88 @@
+{{- $title := .Site.Params.title }}
+{{- $navbar := .Site.Params.navbar }}
+{{- $navbarLogo := .Site.Params.navbarlogo }}
+<nav id="nav" class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            {{- if $navbarLogo}}
+            <a class="navbar-item" href="{{ $navbarLogo.link }}">
+                {{- with $navbarLogo.image }}
+                <img class="navbar-logo" src="{{ printf "/images/%s" . | relURL }}" alt="{{ default (printf "%s logo" $title) $navbarLogo.altText }}">
+                {{- end }}
+                <div class="navbar-logo-text">{{ default "" $navbarLogo.text }}</div>
+            </a>
+            {{- end}}
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbar-menu" class="navbar-menu">
+
+            <div class="navbar-end">
+                {{- range $navbar }}
+                {{- if .sublinks }}
+                <div class="navbar-item has-dropdown">
+                    <a class="navbar-link">
+                        <span class="dropdown-text">{{ .title | strings.TrimSuffix " ▶" }}</span>
+                        <span class="dropdown-arrow">▶</span>
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        {{- range .sublinks }}
+                        <a href="{{ .url }}" class="navbar-item">
+                            {{ .title }}
+                        </a>
+                        {{- end }}
+                    </div>
+                </div>
+                {{- else }}
+                <a href="{{ .url }}" class="navbar-item">
+                    {{ .title }}
+                </a>
+                {{- end }}
+                {{- end }}
+
+                {{- if .IsTranslated }}
+                {{ partial "translation.html" . }}
+                {{- end }}
+            </div>
+        </div>
+    </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.getElementById('nav');
+    let lastScrollY = window.scrollY;
+    
+    function handleScroll() {
+        const currentScrollY = window.scrollY;
+        const scrollPercentage = (currentScrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        
+        // Hide navbar when scrolled X% down the page
+        if (scrollPercentage >= 15) {
+            navbar.classList.add('navbar-hidden');
+        } else {
+            navbar.classList.remove('navbar-hidden');
+        }
+        
+        lastScrollY = currentScrollY;
+    }
+    
+    // Throttle scroll events for better performance
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            requestAnimationFrame(function() {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+});
+</script>
