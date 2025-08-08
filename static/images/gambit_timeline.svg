@@ -52,55 +52,52 @@
   <circle cx="150" cy="1120" r="20" fill="#cc0000" />
   
   <!-- Timeline Events -->
-  <!-- Mid-1980s -->
-  <text x="80" y="150" font-family="Arial" font-size="24" font-weight="bold" fill="black">
-    MID-1980s
+
+  <text x="50" y="180" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+    1980s
   </text>
-  <text x="250" y="150" font-family="Arial" font-size="24" font-weight="normal" fill="black">
-    Gambit Project founded at California Institute of Technology
-  </text>
-  
-  <!-- 1994 -->
-  <text x="600" y="310" font-family="Arial" font-size="24" font-weight="bold" fill="black">
-    1994
-  </text>
-  <text x="250" y="310" font-family="Arial" font-size="24" font-weight="normal" fill="black">
-    First public release (version 0.13)
+  <text x="190" y="180" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+    Implemented in BASIC at Caltech
   </text>
   
-  <!-- 2000s -->
-  <text x="80" y="470" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="660" y="330" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+    Early-1990s
+  </text>
+  <text x="190" y="330" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+    Ported to C and distributed publicly
+  </text>
+  
+  <text x="50" y="488" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+    1990s
+  </text>
+  <text x="190" y="460" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+    C++ re-write
+    <tspan x="190" y="488">Addition of GUI</tspan>
+    <tspan x="190" y="516">Sequence form methods for two-player extensive games</tspan>
+  </text>
+  
+  <text x="660" y="650" font-family="Arial" font-size="24" font-weight="bold" fill="black">
     2000s
   </text>
-  <text x="250" y="470" font-family="Arial" font-size="24" font-weight="normal" fill="black">
-    NSF grants awarded, version 0.94 released
+  <text x="190" y="630" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+    Modernization of GUI
+    <tspan x="190" y="658">Interoperability refactoring</tspan>
   </text>
-  
-  <!-- 2011-12 -->
-  <text x="600" y="630" font-family="Arial" font-size="24" font-weight="bold" fill="black">
-    2011-12
+
+  <text x="50" y="810" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+    2010s
   </text>
-  <text x="250" y="630" font-family="Arial" font-size="24" font-weight="normal" fill="black">
-    Graphical interface reimplemented
-  </text>
-  <text x="250" y="658" font-family="Arial" font-size="24" font-weight="normal" fill="black">
-    internal architecture refactored
-  </text>
-  
-  <!-- 2024– -->
-  <text x="80" y="790" font-family="Arial" font-size="24" font-weight="bold" fill="black">
-    2024–
-  </text>
-  <text x="250" y="790" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="810" font-family="Arial" font-size="24" font-weight="normal" fill="black">
     Python API developed in Google Summer of Code
   </text>
   
-  <!-- 2024-Future -->
-  <text x="580" y="1110" font-family="Arial" font-size="24" font-weight="bold" fill="black">
-    2024-FUTURE
+  <text x="660" y="970" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+    2020s
   </text>
-  <text x="250" y="950" font-family="Arial" font-size="24" font-weight="normal" fill="black">
-    Development as part of Automated analysis of strategic interactions project
+  <text x="190" y="930" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+    Alan Turing Institute development:
+    <tspan x="190" y="958">LLM framework for extensive games</tspan>
+    <tspan x="190" y="986">Open-source community building</tspan>
   </text>
   
 </svg>
