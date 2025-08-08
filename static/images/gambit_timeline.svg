@@ -3,7 +3,7 @@
 <rect width="100%" height="100%" fill="none" />
   
   <!-- Timeline Path -->
-  <path d="M150,160 
+  <path d="M150,30 
            v40 
            a40,40 0 0 0 40,40 
            h400 
@@ -35,61 +35,61 @@
         stroke-linecap="round" />
   
   <!-- Timeline Circles -->
-  <circle cx="150" cy="160" r="20" fill="#cc0000" />
-  <circle cx="630" cy="320" r="20" fill="#cc0000" />
-  <circle cx="150" cy="480" r="20" fill="#cc0000" />
-  <circle cx="630" cy="640" r="20" fill="#cc0000" />
-  <circle cx="150" cy="800" r="20" fill="#cc0000" />
-  <circle cx="630" cy="960" r="20" fill="#cc0000" />
-  <circle cx="150" cy="1120" r="20" fill="#cc0000" />
+  <circle cx="150" cy="30" r="20" fill="#cc0000" />
+  <circle cx="630" cy="190" r="20" fill="#cc0000" />
+  <circle cx="150" cy="350" r="20" fill="#cc0000" />
+  <circle cx="630" cy="510" r="20" fill="#cc0000" />
+  <circle cx="150" cy="670" r="20" fill="#cc0000" />
+  <circle cx="630" cy="830" r="20" fill="#cc0000" />
+  <circle cx="150" cy="990" r="20" fill="#cc0000" />
   
   <!-- Timeline Events -->
 
-  <text x="50" y="180" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="50" y="50" font-family="Arial" font-size="24" font-weight="bold" fill="black">
     1980s
   </text>
-  <text x="190" y="180" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="50" font-family="Arial" font-size="24" font-weight="normal" fill="black">
     Implemented in BASIC at Caltech
   </text>
   
-  <text x="660" y="330" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="660" y="200" font-family="Arial" font-size="24" font-weight="bold" fill="black">
     Early-1990s
   </text>
-  <text x="190" y="330" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="200" font-family="Arial" font-size="24" font-weight="normal" fill="black">
     Ported to C and distributed publicly
   </text>
   
-  <text x="50" y="488" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="50" y="358" font-family="Arial" font-size="24" font-weight="bold" fill="black">
     1990s
   </text>
-  <text x="190" y="460" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="330" font-family="Arial" font-size="24" font-weight="normal" fill="black">
     C++ re-write
-    <tspan x="190" y="488">Addition of GUI</tspan>
-    <tspan x="190" y="516">Sequence form methods for two-player extensive games</tspan>
+    <tspan x="190" y="358">Addition of GUI</tspan>
+    <tspan x="190" y="386">Sequence form methods for two-player extensive games</tspan>
   </text>
   
-  <text x="660" y="650" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="660" y="520" font-family="Arial" font-size="24" font-weight="bold" fill="black">
     2000s
   </text>
-  <text x="190" y="630" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="500" font-family="Arial" font-size="24" font-weight="normal" fill="black">
     Modernization of GUI
-    <tspan x="190" y="658">Interoperability refactoring</tspan>
+    <tspan x="190" y="528">Interoperability refactoring</tspan>
   </text>
 
-  <text x="50" y="810" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="50" y="680" font-family="Arial" font-size="24" font-weight="bold" fill="black">
     2010s
   </text>
-  <text x="190" y="810" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="680" font-family="Arial" font-size="24" font-weight="normal" fill="black">
     Python API developed in Google Summer of Code
   </text>
   
-  <text x="660" y="970" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="660" y="840" font-family="Arial" font-size="24" font-weight="bold" fill="black">
     2020s
   </text>
-  <text x="190" y="930" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="800" font-family="Arial" font-size="24" font-weight="normal" fill="black">
     Alan Turing Institute development:
-    <tspan x="190" y="958">LLM framework for extensive games</tspan>
-    <tspan x="190" y="986">Open-source community building</tspan>
+    <tspan x="190" y="828">LLM framework for extensive games</tspan>
+    <tspan x="190" y="856">Open-source community building</tspan>
   </text>
   
 </svg>
