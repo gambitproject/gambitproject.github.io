@@ -58,14 +58,21 @@ params:
         description: "Description for capability 4."
         icon: capability4.png
   navbar:
-    - title: Documentation
-      url: "https://gambitproject.readthedocs.io/en/stable/"
-      is_external: true
     - title: Team
       url: /team/
     - title: Citing
       url: /cite/
-      is_external: false
+    - title: Info
+      sublinks:
+        - title: Documentation
+          url: "https://gambitproject.readthedocs.io/en/stable/"
+        - title: GitHub
+          url: "https://github.com/gambitproject/gambit"
+        - title: Releases
+          url: "https://github.com/gambitproject/gambit/releases"
+        - title: PyGambit on PyPI
+          url: "https://pypi.org/project/pygambit/"
+
   footer:
     logo: gambit.png
     socialmediatitle:
