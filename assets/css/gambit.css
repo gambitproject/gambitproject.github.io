@@ -241,30 +241,29 @@ nav,
   }
 }
 
-/* Custom dropdown arrow styling */
+/* Custom dropdown arrow styling - work with arrow from config */
 .navbar-item.has-dropdown .navbar-link {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
+/* Hide any default arrows */
 .navbar-item.has-dropdown .navbar-link::after {
-  content: " ▶";
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0.8em;
-  color: var(--pst-color-text-base);
-  transition: transform 0.3s ease;
-  display: inline-block !important;
-  border: none !important;
-  width: auto !important;
-  height: auto !important;
-  margin-top: 0 !important;
+  display: none !important;
 }
 
-/* Rotate arrow on hover */
-.navbar-item.has-dropdown:hover .navbar-link::after {
-  transform: translateY(-50%) rotate(90deg);
+/* Style the separated arrow */
+.dropdown-arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 0.8em;
+}
+
+/* Rotate the arrow on hover */
+.navbar-item.has-dropdown:hover .dropdown-arrow {
+  transform: rotate(90deg);
 }
 
 /* Keep dropdown visible when hovering over it */
