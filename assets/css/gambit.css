@@ -67,6 +67,7 @@
    align-items: center;
    max-width: 85%;
    margin: 0 auto;
+   gap: 2rem;
 }
 
 .info-logo {
@@ -74,13 +75,14 @@
 }
 
 .info-logo img {
-   width: 75%;
-   height: 75%;
+   width: 100%;
+   height: auto;
    object-fit: contain;
 }
 
 .info-text {
    flex: 1;
+   min-width: 0; /* Allow text to shrink */
 }
 
 .info-text p {
@@ -89,6 +91,39 @@
    color: #333;
    margin: 0;
    text-align: left;
+}
+
+/* Mobile responsive adjustments for info section */
+@media (max-width: 768px) {
+   .hero-info-section {
+      margin: 30px 0;
+      padding: 0 15px;
+   }
+   
+   .info-content {
+      flex-direction: column;
+      text-align: center;
+      max-width: 95%;
+      gap: 1.5rem;
+   }
+   
+   .info-logo {
+      max-width: 200px;
+      margin: 0 auto;
+   }
+   
+   .info-logo img {
+      max-width: 200px;
+   }
+   
+   .info-text {
+      width: 100%;
+   }
+   
+   .info-text p {
+      text-align: center;
+      font-size: 1em;
+   }
 }
 
 /* Software icons section */
