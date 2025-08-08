@@ -44,18 +44,18 @@ params:
       - name: LLM tools
         description: "🏗️ Construct and analyse extensive games using large language models."
         icon: llm.png
-    capabilities:
-      - name: Computing Nash equilibria
-        description: "Compute Nash equilibria for extensive games."
+    solvers:
+      - name: Nash Equilibrium Solvers
+        description: "Enumerate pure and mixed-strategy Nash equilibria, including Lemke-Howson, polytope methods."
         icon: nash.png
-      - name: Capability 2
-        description: "Description for capability 2."
+      - name: Extensive Form Solvers
+        description: "Leverage compact sequence-form representations for computing Nash or subgame-perfect equilibria in extensive games"
         icon: capability2.png
-      - name: Capability 3
-        description: "Description for capability 3."
+      - name: Correlated & Refined Equilibrium Solvers
+        description: "LP-based computation of correlated equilibria and specialized tools for refinements like trembling-hand perfect or sequential equilibria."
         icon: capability3.png
-      - name: Capability 4
-        description: "Description for capability 4."
+      - name: Numerical & Bounded-Rationality Solvers
+        description: "For quantal-response equilibria, including logit-response fixed-point computations."
         icon: capability4.png
   navbar:
     - title: Team
