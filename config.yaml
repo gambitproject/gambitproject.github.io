@@ -58,8 +58,6 @@ params:
         description: "Description for capability 4."
         icon: capability4.png
   navbar:
-    - title: Install
-      url: /install
     - title: Documentation
       url: "https://gambitproject.readthedocs.io/en/stable/"
       is_external: true
