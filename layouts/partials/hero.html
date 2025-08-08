@@ -50,10 +50,11 @@
                       </div>
                   </div>
                   
-
-                  <div class="hero-title">Open source & free to use</div>
-                  
-                  <!-- Software icons -->
+                  <!-- Software section -->
+                  {{- $softwareTitle := index $hero "software_title" }}
+                  {{ if $softwareTitle }}
+                  <div class="hero-title">{{ $softwareTitle }}</div>
+                  {{ end }}
                   {{- $software := index $hero "software" }}
                   {{ if $software }}
                   <div class="software-icons">
@@ -79,7 +80,36 @@
                   </div>
                   {{ end }}
 
-                  <div class="hero-title">State of the art solvers</div>
+                  <!-- Solver section -->
+                  {{- $solversTitle := index $hero "solvers_title" }}
+                  {{ if $solversTitle }}
+                  <div class="hero-title">{{ $solversTitle }}</div>
+                  {{ end }}
+                  {{- $solvers := index $hero "solvers" }}
+                  {{ if $solvers }}
+                  <div class="software-icons">
+                      <div class="software-grid">
+                          {{- range $solvers }}
+                          <div class="software-item">
+                              {{ if .link }}
+                              <a href="{{ .link }}" aria-label="{{ .name }}">
+                              {{ end }}
+                                  {{ if .icon }}
+                                  <img src="/images/{{ .icon }}" alt="{{ .name }} icon" class="software-icon">
+                                  {{ else }}
+                                  <div class="software-icon-fallback">{{ substr .name 0 1 }}</div>
+                                  {{ end }}
+                                  <div class="software-name">{{ .name }}</div>
+                                  <div class="software-description">{{ .description }}</div>
+                              {{ if .link }}
+                              </a>
+                              {{ end }}
+                          </div>
+                          {{- end }}
+                      </div>
+                  </div>
+                  {{ end }}
+
               </div>
           </div>
       </div>
