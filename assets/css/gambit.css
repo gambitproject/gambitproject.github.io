@@ -209,9 +209,9 @@ nav,
 }
 
 .navbar-item.has-dropdown .navbar-dropdown {
-  top: 6.8rem; /* was 3.4rem */
+  top: 5.5rem; /* was 6.8rem - moved closer */
   min-width: 440px; /* was 220px */
-  margin-top: 8px; /* was 4px */
+  margin-top: 2px; /* was 8px - reduced gap */
 }
 
 .navbar-item.has-dropdown .navbar-dropdown .navbar-item {
@@ -247,7 +247,7 @@ nav,
 }
 
 .navbar-item.has-dropdown .navbar-link::after {
-  content: "▶";
+  content: " ▶";
   position: absolute;
   right: 1rem;
   top: 50%;
@@ -287,10 +287,10 @@ nav,
 .navbar-item.has-dropdown .navbar-dropdown::before {
   content: "";
   position: absolute;
-  top: -10px;
+  top: -2px; /* reduced from -10px to match closer dropdown */
   left: 0;
   right: 0;
-  height: 10px;
+  height: 2px; /* reduced from 10px */
   background: transparent;
 }
 
