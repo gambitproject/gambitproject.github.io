@@ -7,7 +7,7 @@
     {{ if eq .File.BaseFileName "team" }}
       {{- $team := .Site.Params.team }}
       {{ with $team.title }}
-      <h1>{{ . }}</h1>
+      <h1 class="team-header">{{ . }}</h1>
       {{ end }}
       {{ with $team.description }}
       <p class="team-description">{{ . }}</p>

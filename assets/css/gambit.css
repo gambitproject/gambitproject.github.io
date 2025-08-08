@@ -310,6 +310,12 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
 }
 
 /* Team page styles */
+
+.team-header {
+   text-align: center;
+   margin: 2rem 0;
+}
+
 .team-description {
    font-size: 1.2em;
    line-height: 1.6;
