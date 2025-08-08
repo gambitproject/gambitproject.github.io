@@ -130,11 +130,31 @@
 @media (max-width: 768px) {
    .software-grid {
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 40px;
+      max-width: 400px;
    }
    
    .software-item {
-      max-width: 250px;
+      max-width: 350px;
+   }
+   
+   .software-icon {
+      width: 75px;
+      height: 75px;
+   }
+   
+   .software-icon-fallback {
+      width: 75px;
+      height: 75px;
+      font-size: 1.5em;
+   }
+   
+   .software-name {
+      font-size: 1.5em;
+   }
+   
+   .software-description {
+      font-size: 1.2em;
    }
 }
 
@@ -153,8 +173,8 @@
 .software-grid {
    display: grid;
    grid-template-columns: repeat(2, 1fr);
-   gap: 30px;
-   max-width: 100%;
+   gap: 40px;
+   max-width: 800px;
    margin: 0 auto;
    justify-items: center;
 }
@@ -164,7 +184,7 @@
    flex-direction: column;
    align-items: center;
    text-align: center;
-   max-width: 300px;
+   max-width: 450px;
    width: 100%;
 }
 
@@ -174,14 +194,16 @@
 }
 
 .software-icon {
-   margin-bottom: 10px;
+   margin-bottom: 15px;
    object-fit: contain;
+   width: 90px;
+   height: 90px;
 }
 
 .software-icon-fallback {
-   width: 60px;
-   height: 60px;
-   margin-bottom: 10px;
+   width: 90px;
+   height: 90px;
+   margin-bottom: 15px;
    background-color: #cc0000;
    border-radius: 50%;
    display: flex;
@@ -189,17 +211,18 @@
    justify-content: center;
    color: white;
    font-weight: bold;
+   font-size: 1.8em;
 }
 
 .software-name {
    font-weight: bold;
    color: #cc0000;
-   margin-bottom: 5px;
-   font-size: 1.2em;
+   margin-bottom: 8px;
+   font-size: 1.8em;
 }
 
 .software-description {
-   font-size: 0.9em;
+   font-size: 1.35em;
    color: #666;
 }
 
