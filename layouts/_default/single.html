@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="content-padding">
+  <div class="content-container">
+    {{ partial "breadcrumbs.html" . }}
+    
+    {{/* Check if this is the team page */}}
+    {{ if eq .File.BaseFileName "team" }}
+      {{- $team := .Site.Params.team }}
+      {{ with $team.title }}
+      <h1>{{ . }}</h1>
+      {{ end }}
+      {{ with $team.description }}
+      <p class="team-description">{{ . }}</p>
+      {{ end }}
+      
+      {{ if $team.members }}
+      <div class="team-grid">
+        {{ range $team.members }}
+        <div class="team-member">
+          {{ if .link }}
+          <a href="{{ .link }}" target="_blank" rel="noopener" class="team-member-link">
+          {{ end }}
+            <div class="team-member-image">
+              <img src="{{ printf "/images/%s" .image | relURL }}" alt="{{ .name }}" />
+            </div>
+            <h3 class="team-member-name">{{ .name }}</h3>
+            <div class="team-member-affiliations">
+              {{ range .affiliations }}
+              <div class="team-member-affiliation">{{ . }}</div>
+              {{ end }}
+            </div>
+            <p class="team-member-role">{{ .role }}</p>
+          {{ if .link }}
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    {{ else }}
+      {{/* Default content for non-team pages */}}
+      <h1>{{ .Title }}</h1>
+      {{ if .Params.Subtitle }}
+      <h5 class="subtitle">{{ .Params.Subtitle }}</h5>
+      {{ end }}
+      <div>
+        {{ .Content }}
+      </div>
+    {{ end }}
+  </div>
+  {{ partial "shortcuts.html" . }}
+</section>
+{{ end }}

@@ -74,7 +74,42 @@ params:
           url: "https://github.com/gambitproject/gambit/releases"
         - title: PyGambit on PyPI
           url: "https://pypi.org/project/pygambit/"
-
+  team:
+    title: "The Gambit Development Team"
+    description: "Gambit is developed and maintained by a core team at The Alan Turing Institute, with contributions from the wider community."
+    members:
+      - name: "Theodore Turocy"
+        affiliations: 
+          - "The Alan Turing Institute"
+          - "University of East Anglia"
+        role: "Theme Lead: Game theory and collective decision making in foundational AI research"
+        image: team/ted.png
+        link: "https://tturocy.github.io/"
+      - name: "Rahul Savani"
+        affiliations: 
+          - "The Alan Turing Institute"
+          - "University of Liverpool"
+        role: "Theme lead: Automated Analysis of Strategic Interactions"
+        image: team/rahul.png
+        link: "https://www.turing.ac.uk/people/external-researchers/rahul-savani"
+      - name: "Yongzhao Wang"
+        affiliations: 
+          - "The Alan Turing Institute"
+        role: "Research Associate"
+        image: team/yongzhao.png
+        link: "https://sites.google.com/umich.edu/yongzhao-wang/"
+      - name: "Daniel Kadnikov"
+        affiliations: 
+          - "The Alan Turing Institute"
+        role: "Research Associate"
+        image: team/daniel.png
+        link: "https://www.turing.ac.uk/people/daniel-kadnikov"
+      - name: "Ed Chalstrey"
+        affiliations:
+          - "The Alan Turing Institute"
+        role: "Research Software Engineer"
+        image: team/ed.png
+        link: "https://edchalstrey.com/"
   footer:
     logo: gambit.png
     socialmediatitle:
