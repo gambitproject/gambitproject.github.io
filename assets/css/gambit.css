@@ -300,6 +300,11 @@ nav,
   background: transparent;
 }
 
+/* Disable nav with aria-label="Breadcrumb" */
+nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
+  display: none !important;
+}
+
 #footer {
    background-color: #cc0000;
 }
