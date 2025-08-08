@@ -235,12 +235,63 @@ nav,
     padding-right: 6rem; /* was 3rem */
   }
   
+  /* Remove the default grey diamond arrow */
   .navbar-link::after {
-    border: 6px solid transparent; /* was 3px */
-    border-radius: 4px; /* was 2px */
-    margin-top: -0.75em; /* was -0.375em */
-    right: 2.25em; /* was 1.125em */
+    display: none !important;
   }
+}
+
+/* Custom dropdown arrow styling */
+.navbar-item.has-dropdown .navbar-link {
+  position: relative;
+}
+
+.navbar-item.has-dropdown .navbar-link::after {
+  content: "▶";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  color: var(--pst-color-text-base);
+  transition: transform 0.3s ease;
+  display: inline-block !important;
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+  margin-top: 0 !important;
+}
+
+/* Rotate arrow on hover */
+.navbar-item.has-dropdown:hover .navbar-link::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+/* Keep dropdown visible when hovering over it */
+.navbar-item.has-dropdown:hover .navbar-dropdown,
+.navbar-item.has-dropdown .navbar-dropdown:hover {
+  display: block !important;
+}
+
+/* Add a small delay and transition for smoother interaction */
+.navbar-dropdown {
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.navbar-item.has-dropdown:hover .navbar-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ensure dropdown stays visible when moving mouse from link to dropdown */
+.navbar-item.has-dropdown .navbar-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: transparent;
 }
 
 #footer {
