@@ -30,7 +30,8 @@ params:
       - "The Gambit Project was founded in the mid-1980s at the California Institute of Technology and to this day is actively developed by a community of contributors, with core development led by The Alan Turing Institute in the UK."
     timeline:
       image: gambit_timeline.svg
-      title: "A brief history of Gambit"
+      title: "Through the years"
+      subtitle: "The tools for computational game theory research, from BASIC to the language model era."
     software_title: "Open source & free to use"
     software:
       - name: PyGambit

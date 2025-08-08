@@ -57,6 +57,9 @@
                   {{ with $timeline.title }}
                   <div class="hero-title">{{ . }}</div>
                   {{ end }}
+                  {{ with $timeline.subtitle }}
+                  <div class="hero-subtitle">{{ . }}</div>
+                  {{ end }}
                   <div class="timeline-section">
                       <div class="timeline-container">
                           <img src="{{ printf "/images/%s" $timeline.image | relURL }}" alt="{{ $timeline.title }}" class="timeline-image">
