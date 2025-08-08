@@ -37,19 +37,6 @@
                   </div>
                   {{ end }}
 
-                  <!-- Timeline Section -->
-                  {{- $timeline := index $hero "timeline" }}
-                  {{ if $timeline }}
-                  {{ with $timeline.title }}
-                  <div class="hero-title">{{ . }}</div>
-                  {{ end }}
-                  <div class="timeline-section">
-                      <div class="timeline-container">
-                          <img src="{{ printf "/images/%s" $timeline.image | relURL }}" alt="{{ $timeline.title }}" class="timeline-image">
-                      </div>
-                  </div>
-                  {{ end }}
-
                   <!-- Info section-->
                   <div class="hero-info-section">
                       <div class="info-content">
@@ -63,6 +50,19 @@
                           </div>
                       </div>
                   </div>
+
+                  <!-- Timeline Section -->
+                  {{- $timeline := index $hero "timeline" }}
+                  {{ if $timeline }}
+                  {{ with $timeline.title }}
+                  <div class="hero-title">{{ . }}</div>
+                  {{ end }}
+                  <div class="timeline-section">
+                      <div class="timeline-container">
+                          <img src="{{ printf "/images/%s" $timeline.image | relURL }}" alt="{{ $timeline.title }}" class="timeline-image">
+                      </div>
+                  </div>
+                  {{ end }}
                   
                   <!-- Software section -->
                   {{- $softwareTitle := index $hero "software_title" }}
