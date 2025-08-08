@@ -166,6 +166,11 @@ button.cta-button {
 nav,
 .navbar {
   min-height: 7.6rem; /* was 3.8rem */
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar.navbar-hidden {
+  transform: translateY(-100%);
 }
 
 .navbar-brand {
