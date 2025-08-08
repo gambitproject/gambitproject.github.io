@@ -23,6 +23,39 @@
    text-align: center;
 }
 
+/* Timeline section */
+.timeline-section {
+   margin: 40px 0;
+   text-align: center;
+}
+
+.timeline-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 100%;
+   margin: 0 auto;
+}
+
+.timeline-image {
+   max-width: 100%;
+   height: auto;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive timeline adjustments */
+@media (max-width: 768px) {
+   .timeline-section {
+      margin: 20px 0;
+      padding: 0 10px;
+   }
+   
+   .timeline-image {
+      max-width: 95%;
+   }
+}
+
 /* Hero info section */
 .hero-info-section {
    margin: 40px 0;

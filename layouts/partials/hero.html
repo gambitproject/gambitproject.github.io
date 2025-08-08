@@ -29,10 +29,24 @@
                     <a class="github-button" href="https://github.com/gambitproject/gambit/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork gambitproject/gambit on GitHub">Fork</a>
                     <script async defer src="https://buttons.github.io/buttons.js"></script>
                   </div>
-                  
+
+                  <!-- Get Started Button -->
                   {{ if $buttonText }}
                   <div class="hero-cta">
                       <a href="{{ $buttonLink }}"><button class="cta-button">{{ $buttonText }}</button></a>
+                  </div>
+                  {{ end }}
+
+                  <!-- Timeline Section -->
+                  {{- $timeline := index $hero "timeline" }}
+                  {{ if $timeline }}
+                  {{ with $timeline.title }}
+                  <div class="hero-title">{{ . }}</div>
+                  {{ end }}
+                  <div class="timeline-section">
+                      <div class="timeline-container">
+                          <img src="{{ printf "/images/%s" $timeline.image | relURL }}" alt="{{ $timeline.title }}" class="timeline-image">
+                      </div>
                   </div>
                   {{ end }}
 
