@@ -126,38 +126,6 @@
    }
 }
 
-/* Responsive adjustments for software grid */
-@media (max-width: 768px) {
-   .software-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      max-width: 400px;
-   }
-   
-   .software-item {
-      max-width: 350px;
-   }
-   
-   .software-icon {
-      width: 75px;
-      height: 75px;
-   }
-   
-   .software-icon-fallback {
-      width: 75px;
-      height: 75px;
-      font-size: 1.5em;
-   }
-   
-   .software-name {
-      font-size: 1.5em;
-   }
-   
-   .software-description {
-      font-size: 1.2em;
-   }
-}
-
 /* Software icons section */
 .software-icons {
    margin: 40px 0;
@@ -224,6 +192,38 @@
 .software-description {
    font-size: 1.35em;
    color: #666;
+}
+
+/* Responsive adjustments for software grid */
+@media (max-width: 768px) {
+   .software-grid {
+      grid-template-columns: 1fr !important;
+      gap: 40px;
+      max-width: 400px;
+   }
+   
+   .software-item {
+      max-width: 350px;
+   }
+   
+   .software-icon {
+      width: 75px;
+      height: 75px;
+   }
+   
+   .software-icon-fallback {
+      width: 75px;
+      height: 75px;
+      font-size: 1.5em;
+   }
+   
+   .software-name {
+      font-size: 1.5em;
+   }
+   
+   .software-description {
+      font-size: 1.2em;
+   }
 }
 
 button.cta-button {
