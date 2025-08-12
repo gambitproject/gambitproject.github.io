@@ -73,6 +73,8 @@ params:
   navbar:
     - title: Team
       url: /team/
+    - title: Research
+      url: /research/
     - title: Citing
       url: /cite/
     - title: Info
@@ -121,6 +123,14 @@ params:
         role: "Research Software Engineer"
         image: team/ed.png
         link: "https://edchalstrey.com/"
+    research:
+      title: "Active Research"
+      description: "A variety of research projects using Gambit are currently underway, exploring new methods for game-theoretic analysis, applications in AI, and the development of novel algorithms."
+      projects:
+        - title: "Automated analysis of strategic interactions"
+          institution: "The Alan Turing Institute"
+          description: "Creating the tools to support strategic reasoning about interactions among human and automated agents in complex and changing environments."
+          link: "https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions"
   footer:
     logo: gambit.png
     socialmediatitle:

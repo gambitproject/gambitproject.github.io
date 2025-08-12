@@ -37,6 +37,33 @@
         {{ end }}
       </div>
       {{ end }}
+    {{ else if eq .File.BaseFileName "research" }}
+      {{/* Research page */}}
+      {{- $research := .Site.Params.team.research }}
+      {{ with $research.title }}
+      <h1 class="research-header">{{ . }}</h1>
+      {{ end }}
+      {{ with $research.description }}
+      <p class="research-description">{{ . }}</p>
+      {{ end }}
+      
+      {{ if $research.projects }}
+      <div class="research-grid">
+        {{ range $research.projects }}
+        <div class="research-project">
+          {{ if .link }}
+          <a href="{{ .link }}" target="_blank" rel="noopener" class="research-project-link">
+          {{ end }}
+            <h3 class="research-project-title">{{ .title }}</h3>
+            <div class="research-project-institution">{{ .institution }}</div>
+            <p class="research-project-description">{{ .description }}</p>
+          {{ if .link }}
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
     {{ else }}
       {{/* Default content for non-team pages */}}
       <h1>{{ .Title }}</h1>
