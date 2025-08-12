@@ -226,6 +226,116 @@
    }
 }
 
+/* Testimonials section */
+.testimonials-section {
+   margin: 60px 0;
+   text-align: center;
+}
+
+.testimonials-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+   gap: 40px;
+   max-width: 1000px;
+   margin: 40px auto 0;
+   padding: 0 20px;
+}
+
+.testimonial-item {
+   background: #fff;
+   border-radius: 12px;
+   padding: 30px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+   border: 1px solid rgba(204, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   position: relative;
+}
+
+.testimonial-item:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-quote {
+   margin-bottom: 25px;
+   position: relative;
+}
+
+.quote-mark {
+   font-size: 4rem;
+   color: #cc0000;
+   font-family: 'Times New Roman', serif;
+   position: absolute;
+   top: -20px;
+   left: -10px;
+   line-height: 1;
+   opacity: 0.3;
+}
+
+.quote-text {
+   font-size: 1.1em;
+   line-height: 1.6;
+   color: #333;
+   font-style: italic;
+   text-align: left;
+   padding-left: 20px;
+   position: relative;
+   z-index: 1;
+}
+
+.testimonial-author {
+   text-align: left;
+   padding-left: 20px;
+   border-top: 2px solid #f0f0f0;
+   padding-top: 20px;
+}
+
+.author-name {
+   font-weight: bold;
+   color: #cc0000;
+   font-size: 1.1em;
+   margin-bottom: 5px;
+}
+
+.author-role {
+   color: #666;
+   font-size: 0.95em;
+   line-height: 1.4;
+}
+
+/* Responsive adjustments for testimonials */
+@media (max-width: 768px) {
+   .testimonials-section {
+      margin: 40px 0;
+   }
+   
+   .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding: 0 15px;
+      max-width: 90%;
+   }
+   
+   .testimonial-item {
+      padding: 25px;
+   }
+   
+   .quote-mark {
+      font-size: 3rem;
+      top: -15px;
+      left: -5px;
+   }
+   
+   .quote-text {
+      font-size: 1em;
+      padding-left: 15px;
+   }
+   
+   .testimonial-author {
+      padding-left: 15px;
+   }
+}
+
 button.cta-button {
    background-color: #cc0000;
 }

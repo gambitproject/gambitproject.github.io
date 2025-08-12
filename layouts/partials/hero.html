@@ -111,6 +111,27 @@
                 </div>
                 {{ end }}
 
+                <!-- Testimonials Section -->
+                {{- $testimonials := index $hero "testimonials" }}
+                {{ if $testimonials }}
+                <div class="testimonials-section">
+                    <div class="testimonials-grid">
+                        {{- range $testimonials }}
+                        <div class="testimonial-item">
+                            <div class="testimonial-quote">
+                                <div class="quote-mark">"</div>
+                                <div class="quote-text">{{ .quote }}</div>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-name">{{ .name }}</div>
+                                <div class="author-role">{{ .role }}</div>
+                            </div>
+                        </div>
+                        {{- end }}
+                    </div>
+                </div>
+                {{ end }}
+
                 <!-- Timeline Section -->
                 {{- $timeline := index $hero "timeline" }}
                 {{ if $timeline }}
