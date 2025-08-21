@@ -68,6 +68,7 @@
    max-width: 85%;
    margin: 0 auto;
    gap: 2rem;
+   padding-top: 5em;
 }
 
 .info-logo {
@@ -75,7 +76,7 @@
 }
 
 .info-logo img {
-   width: 100%;
+   width: 35em;
    height: auto;
    object-fit: contain;
 }
@@ -83,6 +84,7 @@
 .info-text {
    flex: 1;
    min-width: 0; /* Allow text to shrink */
+   font-size: 1.35em;
 }
 
 .info-text p {
