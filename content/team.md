@@ -9,7 +9,7 @@ title: The Gambit development team
 
 * [**Theodore Turocy**](https://tturocy.github.io) (Alan Turing Institute and University of East Anglia)
 * [**Rahul Savani**](https://www.csc.liv.ac.uk/~rahul/) (Alan Turing Institute and University of Liverpool)
-* [**Yongzhao Wang**](https://sites.google.com/umich.edu/yongzhao-wang/) (Alan Turing Institute)
+* [**Ed Chalstrey**](https://www.turing.ac.uk/people/researchers/ed-chalstrey) (Alan Turing Institute)
 * [**Daniel Kadnikov**](https://www.turing.ac.uk/people/daniel-kadnikov) (Alan Turing Institute)
 
 
