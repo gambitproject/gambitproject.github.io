@@ -59,13 +59,13 @@ params:
         description: "LP-based computation of correlated equilibria and specialized tools for refinements like trembling-hand perfect or sequential equilibria."
       - name: Numerical & Bounded-Rationality Solvers
         description: "For quantal-response equilibria, including logit-response fixed-point computations."
-    testimonials:
-      - name: "Professor X"
-        role: "Professor of Game Theory, University of Cambridge"
-        quote: "Gambit is the gold standard for computational game theory. It has been a cornerstone of my research for over 20 years."
-      - name: "Professor Y"
-        role: "Professor of Computer Science, University of Oxford"
-        quote: "Gambit provides powerful tools for analyzing complex strategic interactions, making it indispensable for my work in AI and game theory."
+    # testimonials:
+    #   - name: "Professor X"
+    #     role: "Professor of Game Theory, University of Cambridge"
+    #     quote: "Gambit is the gold standard for computational game theory. It has been a cornerstone of my research for over 20 years."
+    #   - name: "Professor Y"
+    #     role: "Professor of Computer Science, University of Oxford"
+    #     quote: "Gambit provides powerful tools for analyzing complex strategic interactions, making it indispensable for my work in AI and game theory."
   navbar:
     - title: Team
       url: /team/
