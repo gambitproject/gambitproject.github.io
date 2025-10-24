@@ -120,8 +120,8 @@ params:
         image: team/ed.png
         link: "https://edchalstrey.com/"
     research:
-      title: "Active Research"
-      description: "A variety of research projects using Gambit are currently underway, exploring new methods for game-theoretic analysis, applications in AI, and the development of novel algorithms."
+      title: "Selected Research Projects Using Gambit"
+      # description: "A variety of research projects using Gambit are currently underway, exploring new methods for game-theoretic analysis, applications in AI, and the development of novel algorithms."
       projects:
         - title: "Automated analysis of strategic interactions"
           institution: "The Alan Turing Institute"
