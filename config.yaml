@@ -101,12 +101,6 @@ params:
         role: "Theme lead: Automated Analysis of Strategic Interactions"
         image: team/rahul.png
         link: "https://www.turing.ac.uk/people/external-researchers/rahul-savani"
-      - name: "Yongzhao Wang"
-        affiliations: 
-          - "The Alan Turing Institute"
-        role: "Research Associate"
-        image: team/yongzhao.png
-        link: "https://sites.google.com/umich.edu/yongzhao-wang/"
       - name: "Daniel Kadnikov"
         affiliations: 
           - "The Alan Turing Institute"
@@ -119,6 +113,18 @@ params:
         role: "Research Software Engineer"
         image: team/ed.png
         link: "https://edchalstrey.com/"
+      - name: "Stephen Pasteris"
+        affiliations: 
+          - "The Alan Turing Institute"
+        role: "Research Associate"
+        image: team/stephen.jpeg
+        link: "https://ieeexplore.ieee.org/author/37086404209"
+      - name: "Yongzhao Wang"
+        affiliations: 
+          - "The Alan Turing Institute"
+        role: "Former Research Associate"
+        image: team/yongzhao.png
+        link: "https://sites.google.com/umich.edu/yongzhao-wang/"
     research:
       title: "Selected Research Projects Using Gambit"
       # description: "A variety of research projects using Gambit are currently underway, exploring new methods for game-theoretic analysis, applications in AI, and the development of novel algorithms."
