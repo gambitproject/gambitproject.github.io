@@ -21,7 +21,7 @@ params:
     link: /
   hero:
     title: Software tools for game theory.
-    subtitle: Build, analyse, and explore finite extensive and strategic games.
+    subtitle: Build, analyse, and explore finite extensive and strategic form games.
     image: gambit.png
     buttontext: Get started
     buttonlink: "https://gambitproject.readthedocs.io/en/stable/"
