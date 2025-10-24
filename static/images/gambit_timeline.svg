@@ -45,51 +45,58 @@
   
   <!-- Timeline Events -->
 
-  <text x="50" y="50" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="50" y="50" font-family="Arial" font-size="23" font-weight="bold" fill="black">
     1980s
   </text>
-  <text x="190" y="50" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="50" font-family="Arial" font-size="23" font-weight="normal" fill="black">
     Implemented in BASIC at Caltech
   </text>
   
-  <text x="660" y="200" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="660" y="200" font-family="Arial" font-size="23" font-weight="bold" fill="black">
     Early-1990s
   </text>
-  <text x="190" y="200" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="200" font-family="Arial" font-size="23" font-weight="normal" fill="black">
     Ported to C and distributed publicly
   </text>
   
-  <text x="50" y="358" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="50" y="358" font-family="Arial" font-size="23" font-weight="bold" fill="black">
     1990s
   </text>
-  <text x="190" y="330" font-family="Arial" font-size="24" font-weight="normal" fill="black">
-    C++ re-write
-    <tspan x="190" y="358">Addition of GUI</tspan>
-    <tspan x="190" y="386">Sequence form methods for two-player extensive games</tspan>
+  <text x="190" y="330" font-family="Arial" font-size="23" font-weight="normal" fill="black">
+    <tspan x="190" y="340">C++ re-write</tspan>
+    <tspan x="190" y="368">Addition of GUI</tspan>
   </text>
   
-  <text x="660" y="520" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="660" y="520" font-family="Arial" font-size="23" font-weight="bold" fill="black">
     2000s
   </text>
-  <text x="190" y="500" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="500" font-family="Arial" font-size="23" font-weight="normal" fill="black">
     Modernization of GUI
     <tspan x="190" y="528">Interoperability refactoring</tspan>
   </text>
 
-  <text x="50" y="680" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="50" y="680" font-family="Arial" font-size="23" font-weight="bold" fill="black">
     2010s
   </text>
-  <text x="190" y="680" font-family="Arial" font-size="24" font-weight="normal" fill="black">
+  <text x="190" y="680" font-family="Arial" font-size="23" font-weight="normal" fill="black">
     Python API developed in Google Summer of Code
   </text>
   
-  <text x="660" y="840" font-family="Arial" font-size="24" font-weight="bold" fill="black">
+  <text x="660" y="840" font-family="Arial" font-size="23" font-weight="bold" fill="black">
+    Early-2020s
+  </text>
+  <text x="190" y="800" font-family="Arial" font-size="23" font-weight="normal" fill="black">
+    Development at The Alan Turing Institute
+    <tspan x="190" y="828">LLM framework for extensive games</tspan>
+    <tspan x="190" y="856">Modernization of Python API</tspan>
+  </text>
+
+  <text x="50" y="1000" font-family="Arial" font-size="23" font-weight="bold" fill="black">
     2020s
   </text>
-  <text x="190" y="800" font-family="Arial" font-size="24" font-weight="normal" fill="black">
-    Alan Turing Institute development:
-    <tspan x="190" y="828">LLM framework for extensive games</tspan>
-    <tspan x="190" y="856">Open-source community building</tspan>
+  <text x="190" y="960" font-family="Arial" font-size="23" font-weight="normal" fill="black">
+    Performance improvements
+    <tspan x="190" y="988">Open-source community building</tspan>
   </text>
   
 </svg>
