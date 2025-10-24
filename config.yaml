@@ -47,7 +47,7 @@ params:
         icon: cli.png
         link: "https://gambitproject.readthedocs.io/en/stable/tools.html"
       - name: LLM tools
-        description: "🏗️ WIP: Construct and analyse extensive games using large language models."
+        description: "🏗️ WIP: Construct extensive games using our language model framework."
         icon: llm.png
     solvers_title: "State of the art methods"
     solvers:
