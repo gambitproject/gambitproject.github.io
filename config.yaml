@@ -53,16 +53,12 @@ params:
     solvers:
       - name: Nash Equilibrium Solvers
         description: "Enumerate pure and mixed-strategy Nash equilibria, including Lemke-Howson, polytope methods."
-        icon: example.png
       - name: Extensive Form Solvers
         description: "Leverage compact sequence-form representations for computing Nash or subgame-perfect equilibria in extensive games"
-        icon: example.png
       - name: Correlated & Refined Equilibrium Solvers
         description: "LP-based computation of correlated equilibria and specialized tools for refinements like trembling-hand perfect or sequential equilibria."
-        icon: example.png
       - name: Numerical & Bounded-Rationality Solvers
         description: "For quantal-response equilibria, including logit-response fixed-point computations."
-        icon: example.png
     testimonials:
       - name: "Professor X"
         role: "Professor of Game Theory, University of Cambridge"
