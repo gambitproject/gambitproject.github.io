@@ -17,6 +17,8 @@
    margin: 0 auto;
 }
 
+.hero-description-item + .hero-description-item { margin-top: 1rem; }
+
 /* GitHub buttons container */
 .github-buttons {
    margin: 20px 0;

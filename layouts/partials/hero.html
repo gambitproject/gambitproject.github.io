@@ -46,7 +46,9 @@
                         <div class="info-text">
                             {{ range $description }}
                                 {{/* Render description items as Markdown so links like [text](url) become clickable */}}
-                                {{ . | markdownify }}
+                                <div class="hero-description-item">
+                                    {{ . | markdownify }}
+                                </div>
                             {{ end }}
                         </div>
                     </div>
