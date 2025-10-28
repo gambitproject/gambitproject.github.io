@@ -67,14 +67,14 @@ params:
     #     role: "Professor of Computer Science, University of Oxford"
     #     quote: "Gambit provides powerful tools for analyzing complex strategic interactions, making it indispensable for my work in AI and game theory."
   navbar:
-    - title: Team
-      url: /team/
     # - title: Research
     #   url: /research/
+    - title: Install
+      url: /install/
     - title: Documentation
       url: "https://gambitproject.readthedocs.io/en/stable/"
-    - title: Releases
-      url: "https://github.com/gambitproject/gambit/releases"
+    - title: Team
+      url: /team/
     - title: Citing
       url: /cite/
     - title: Info
