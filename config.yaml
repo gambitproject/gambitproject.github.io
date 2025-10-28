@@ -11,33 +11,128 @@ markup:
 
 params:
   navColor: red
-  description: "The package for computation in game theory."
   images:
     - /images/gambit.png
   fonts:
     - name: "Lato"
       weights: [400, 900]
   navbarlogo:
-    image: gambit-tree.png
-    text: "Gambit: The package for computation in game theory"
+    image: gambit.png
     link: /
   hero:
-    title: Gambit
-    subtitle: The package for computation in game theory
-    image: gambit-tree.png
+    title: Software tools for game theory.
+    subtitle: Build, analyse, and explore finite extensive and strategic form games.
+    image: gambit.png
     buttontext: Get started
-    buttonlink: "/install"
+    buttonlink: "https://gambitproject.readthedocs.io/en/stable/"
+    description:
+      - "Gambit is a set of software tools for doing computation on finite, noncooperative games in extensive or strategy form and a set of file formats for storing and communicating games to external tools."
+      - "The Gambit Project was founded in the mid-1980s at the California Institute of Technology and to this day is actively developed by a community of contributors, with core development led by [The Alan Turing Institute](https://www.turing.ac.uk) as part of its project: [Automated analysis of strategic interactions](https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions)."
+    # timeline:
+    #   image: gambit_timeline.svg
+    #   title: "Through the years"
+    #   subtitle: "The tools for computational game theory research, from BASIC to the language model era."
+    software_title: "Open source & free to use"
+    software:
+      - name: PyGambit
+        description: "Python API providing access to Gambit's features."
+        icon: python.png
+        link: "https://gambitproject.readthedocs.io/en/stable/pygambit.html"
+      - name: GUI
+        description: "Visually construct games and investigate their main strategic features."
+        icon: gui.png
+        link: "https://gambitproject.readthedocs.io/en/stable/gui.html"
+      - name: CLI
+        description: "Command-line tools suitable for scripting or calling from other programs."
+        icon: cli.png
+        link: "https://gambitproject.readthedocs.io/en/stable/tools.html"
+      # - name: LLM tools
+      #   description: "🏗️ WIP: Construct extensive games using our language model framework."
+      #   icon: llm.png
+    # solvers_title: "State of the art methods"
+    # solvers:
+    #   - name: Nash Equilibrium Solvers
+    #     description: "Enumerate pure and mixed-strategy Nash equilibria, including Lemke-Howson, polytope methods."
+    #   - name: Extensive Form Solvers
+    #     description: "Leverage compact sequence-form representations for computing Nash or subgame-perfect equilibria in extensive games"
+    #   - name: Correlated & Refined Equilibrium Solvers
+    #     description: "LP-based computation of correlated equilibria and specialized tools for refinements like trembling-hand perfect or sequential equilibria."
+    #   - name: Numerical & Bounded-Rationality Solvers
+    #     description: "For quantal-response equilibria, including logit-response fixed-point computations."
+    # testimonials:
+    #   - name: "Professor X"
+    #     role: "Professor of Game Theory, University of Cambridge"
+    #     quote: "Gambit is the gold standard for computational game theory. It has been a cornerstone of my research for over 20 years."
+    #   - name: "Professor Y"
+    #     role: "Professor of Computer Science, University of Oxford"
+    #     quote: "Gambit provides powerful tools for analyzing complex strategic interactions, making it indispensable for my work in AI and game theory."
   navbar:
+    # - title: Research
+    #   url: /research/
     - title: Install
-      url: /install
+      url: /install/
     - title: Documentation
       url: "https://gambitproject.readthedocs.io/en/stable/"
-      is_external: true
     - title: Team
       url: /team/
     - title: Citing
       url: /cite/
-      is_external: false
+    - title: Info
+      sublinks:
+        - title: GitHub
+          url: "https://github.com/gambitproject/gambit"
+        - title: PyGambit on PyPI
+          url: "https://pypi.org/project/pygambit/"
+  team:
+    title: "The Gambit Development Team"
+    description: "Gambit is developed and maintained by a core team at The Alan Turing Institute, with contributions from the wider community."
+    members:
+      - name: "Theodore Turocy"
+        affiliations: 
+          - "The Alan Turing Institute"
+          - "University of East Anglia"
+        role: "Theme Lead: Game theory and collective decision making in foundational AI research"
+        image: team/ted.png
+        link: "https://tturocy.github.io/"
+      - name: "Rahul Savani"
+        affiliations: 
+          - "The Alan Turing Institute"
+          - "University of Liverpool"
+        role: "Theme lead: Automated Analysis of Strategic Interactions"
+        image: team/rahul.png
+        link: "https://www.turing.ac.uk/people/external-researchers/rahul-savani"
+      - name: "Daniel Kadnikov"
+        affiliations: 
+          - "The Alan Turing Institute"
+        role: "Research Associate"
+        image: team/daniel.png
+        link: "https://www.turing.ac.uk/people/daniel-kadnikov"
+      - name: "Ed Chalstrey"
+        affiliations:
+          - "The Alan Turing Institute"
+        role: "Research Software Engineer"
+        image: team/ed.png
+        link: "https://edchalstrey.com/"
+      - name: "Stephen Pasteris"
+        affiliations: 
+          - "The Alan Turing Institute"
+        role: "Research Associate"
+        image: team/stephen.jpeg
+        link: "https://ieeexplore.ieee.org/author/37086404209"
+      # - name: "Yongzhao Wang"
+      #   affiliations: 
+      #     - "The Alan Turing Institute"
+      #   role: "Former Research Associate"
+      #   image: team/yongzhao.png
+      #   link: "https://sites.google.com/umich.edu/yongzhao-wang/"
+    # research:
+    #   title: "Selected Research Projects Using Gambit"
+    #   # description: "A variety of research projects using Gambit are currently underway, exploring new methods for game-theoretic analysis, applications in AI, and the development of novel algorithms."
+    #   projects:
+    #     - title: "Automated analysis of strategic interactions"
+    #       institution: "The Alan Turing Institute"
+    #       description: "Creating the tools to support strategic reasoning about interactions among human and automated agents in complex and changing environments."
+    #       link: "https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions"
   footer:
     logo: gambit.png
     socialmediatitle:
@@ -46,20 +141,4 @@ params:
         icon: discourse
       - link: https://github.com/gambitproject/gambit
         icon: github
-    quicklinks:
-      column1:
-        title: ""
-        links:
-          - text: Install
-            link: /install
-      column2:
-        title: ""
-        links:
-          - text: Documentation
-            link: "https://gambitproject.readthedocs.io"
-      column3:
-        title: ""
-        links:
-          - text: Team
-            link: /team
 

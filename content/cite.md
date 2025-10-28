@@ -11,10 +11,6 @@ and where you think improvements could be made.
 
 If Gambit was useful to you in writing a scientific paper, we suggest a citation of the form:
 
-Savani, Rahul and Turocy, Theodore L. (2025).
-Gambit: The package for computation in game theory, Version 16.3.0.
-https://www.gambit-project.org.
+>  Savani, Rahul and Turocy, Theodore L. (**2025**). Gambit: The package for computation in game theory, Version **X.X.X.** https://www.gambit-project.org.
 
-
-Replace the version number and year as appropriate if you use a
-different release.
+*Replace X.X.X with the version number you used and replace the year as appropriate. See [releases](https://github.com/gambitproject/gambit/releases).* 

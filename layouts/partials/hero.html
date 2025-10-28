@@ -5,34 +5,152 @@
 {{- $buttonText     := index $hero "buttontext" }}
 {{- $buttonLink     := index $hero "buttonlink" }}
 {{- $image          := index $hero "image" }}
+{{- $description    := index $hero "description" }}
 
 <section class="hero">
   <div class="hero-container">
       <div class="hero-content">
           <div class="hero-title-content" style="display: flex; flex-direction: column;">
-              <div class="hero-title">
-                  {{ $title }}
-                  <img class="hero-logo" src="{{ printf "/images/%s" $image | relURL }}" alt="{{ $title }} logo. {{ $navbarLogo.altText }}">
-              </div>
               <div class="flex-column">
-                  {{ with $subtitle }}
-                  <div class="hero-subtitle">
-                      {{ . }}
-                  </div>
-                  {{ end }}
-                  
-                  <!-- GitHub Stars and Forks Buttons -->
-                  <div style="margin: 20px 0; text-align: center;">
-                    <a class="github-button" href="https://github.com/gambitproject/gambit" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star gambitproject/gambit on GitHub">Star</a>
-                    <a class="github-button" href="https://github.com/gambitproject/gambit/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork gambitproject/gambit on GitHub">Fork</a>
-                    <script async defer src="https://buttons.github.io/buttons.js"></script>
-                  </div>
-                  
-                  {{ if $buttonText }}
-                  <div class="hero-cta">
-                      <a href="{{ $buttonLink }}"><button class="cta-button">{{ $buttonText }}</button></a>
-                  </div>
-                  {{ end }}
+                {{ with $title }}
+                <div class="hero-title">
+                    {{ . }}
+                </div>
+                {{ end }}
+                {{ with $subtitle }}
+                <div class="hero-subtitle">
+                    {{ . }}
+                </div>
+                {{ end }}
+                
+                <!-- GitHub Stars and Forks Buttons -->
+                <div class="github-buttons">
+                <a class="github-button" href="https://github.com/gambitproject/gambit" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star gambitproject/gambit on GitHub">Star</a>
+                <a class="github-button" href="https://github.com/gambitproject/gambit/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork gambitproject/gambit on GitHub">Fork</a>
+                <script async defer src="https://buttons.github.io/buttons.js"></script>
+                </div>
+
+                <!-- Get Started Button -->
+                {{ if $buttonText }}
+                <div class="hero-cta">
+                    <a href="{{ $buttonLink }}"><button class="cta-button">{{ $buttonText }}</button></a>
+                </div>
+                {{ end }}
+
+                <!-- Info section-->
+                <div class="hero-info-section">
+                    <div class="info-content">
+                        <div class="info-logo">
+                            <img src="{{ printf "/images/%s" $image | relURL }}" alt="{{ $title }} logo">
+                        </div>
+                        <div class="info-text">
+                            {{ range $description }}
+                                {{/* Render description items as Markdown so links like [text](url) become clickable */}}
+                                <div class="hero-description-item">
+                                    {{ . | markdownify }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software section -->
+                {{- $softwareTitle := index $hero "software_title" }}
+                {{ if $softwareTitle }}
+                <div class="hero-title">{{ $softwareTitle }}</div>
+                {{ end }}
+                {{- $software := index $hero "software" }}
+                {{ if $software }}
+                <div class="software-icons">
+                    <div class="software-grid">
+                        {{- range $software }}
+                        <div class="software-item">
+                            {{ if .link }}
+                            <a href="{{ .link }}" aria-label="{{ .name }}">
+                                {{ end }}
+                                {{ if .icon }}
+                                <img src="/images/{{ .icon }}" alt="{{ .name }} icon" class="software-icon">
+                                {{ else }}
+                                <div class="software-icon-fallback">{{ substr .name 0 1 }}</div>
+                                {{ end }}
+                                <div class="software-name">{{ .name }}</div>
+                                <div class="software-description">{{ .description }}</div>
+                                {{ if .link }}
+                            </a>
+                            {{ end }}
+                        </div>
+                        {{- end }}
+                    </div>
+                </div>
+                {{ end }}
+
+                <!-- Solver section -->
+                {{- $solversTitle := index $hero "solvers_title" }}
+                {{ if $solversTitle }}
+                <div class="hero-title">{{ $solversTitle }}</div>
+                {{ end }}
+                {{- $solvers := index $hero "solvers" }}
+                {{ if $solvers }}
+                <div class="software-icons">
+                    <div class="software-grid">
+                        {{- range $solvers }}
+                        <div class="software-item">
+                            {{ if .link }}
+                            <a href="{{ .link }}" aria-label="{{ .name }}">
+                            {{ end }}
+                                {{ if .icon }}
+                                <img src="/images/{{ .icon }}" alt="{{ .name }} icon" class="software-icon">
+                                {{ else }}
+                                <div class="software-icon-fallback">{{ substr .name 0 1 }}</div>
+                                {{ end }}
+                                <div class="software-name">{{ .name }}</div>
+                                <div class="software-description">{{ .description }}</div>
+                            {{ if .link }}
+                            </a>
+                            {{ end }}
+                        </div>
+                        {{- end }}
+                    </div>
+                </div>
+                {{ end }}
+
+                <!-- Testimonials Section -->
+                {{- $testimonials := index $hero "testimonials" }}
+                {{ if $testimonials }}
+                <div class="testimonials-section">
+                    <div class="testimonials-grid">
+                        {{- range $testimonials }}
+                        <div class="testimonial-item">
+                            <div class="testimonial-quote">
+                                <div class="quote-mark">"</div>
+                                <div class="quote-text">{{ .quote }}</div>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="author-name">{{ .name }}</div>
+                                <div class="author-role">{{ .role }}</div>
+                            </div>
+                        </div>
+                        {{- end }}
+                    </div>
+                </div>
+                {{ end }}
+
+                <!-- Timeline Section -->
+                {{- $timeline := index $hero "timeline" }}
+                {{ if $timeline }}
+                {{ with $timeline.title }}
+                <div class="hero-title">{{ . }}</div>
+                {{ end }}
+                {{ with $timeline.subtitle }}
+                <div class="hero-subtitle">{{ . }}</div>
+                {{ end }}
+                <div class="timeline-section">
+                    <div class="timeline-container">
+                        <img src="{{ printf "/images/%s" $timeline.image | relURL }}" alt="{{ $timeline.title }}" class="timeline-image">
+                    </div>
+                </div>
+                {{ end }}
+
               </div>
           </div>
       </div>
