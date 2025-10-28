@@ -28,10 +28,10 @@ params:
     description:
       - "Gambit is a set of software tools for doing computation on finite, noncooperative games in extensive or strategy form and a set of file formats for storing and communicating games to external tools."
       - "The Gambit Project was founded in the mid-1980s at the California Institute of Technology and to this day is actively developed by a community of contributors, with core development led by The Alan Turing Institute in the UK."
-    timeline:
-      image: gambit_timeline.svg
-      title: "Through the years"
-      subtitle: "The tools for computational game theory research, from BASIC to the language model era."
+    # timeline:
+    #   image: gambit_timeline.svg
+    #   title: "Through the years"
+    #   subtitle: "The tools for computational game theory research, from BASIC to the language model era."
     software_title: "Open source & free to use"
     software:
       - name: PyGambit
@@ -46,19 +46,19 @@ params:
         description: "Command-line tools suitable for scripting or calling from other programs."
         icon: cli.png
         link: "https://gambitproject.readthedocs.io/en/stable/tools.html"
-      - name: LLM tools
-        description: "🏗️ WIP: Construct extensive games using our language model framework."
-        icon: llm.png
-    solvers_title: "State of the art methods"
-    solvers:
-      - name: Nash Equilibrium Solvers
-        description: "Enumerate pure and mixed-strategy Nash equilibria, including Lemke-Howson, polytope methods."
-      - name: Extensive Form Solvers
-        description: "Leverage compact sequence-form representations for computing Nash or subgame-perfect equilibria in extensive games"
-      - name: Correlated & Refined Equilibrium Solvers
-        description: "LP-based computation of correlated equilibria and specialized tools for refinements like trembling-hand perfect or sequential equilibria."
-      - name: Numerical & Bounded-Rationality Solvers
-        description: "For quantal-response equilibria, including logit-response fixed-point computations."
+      # - name: LLM tools
+      #   description: "🏗️ WIP: Construct extensive games using our language model framework."
+      #   icon: llm.png
+    # solvers_title: "State of the art methods"
+    # solvers:
+    #   - name: Nash Equilibrium Solvers
+    #     description: "Enumerate pure and mixed-strategy Nash equilibria, including Lemke-Howson, polytope methods."
+    #   - name: Extensive Form Solvers
+    #     description: "Leverage compact sequence-form representations for computing Nash or subgame-perfect equilibria in extensive games"
+    #   - name: Correlated & Refined Equilibrium Solvers
+    #     description: "LP-based computation of correlated equilibria and specialized tools for refinements like trembling-hand perfect or sequential equilibria."
+    #   - name: Numerical & Bounded-Rationality Solvers
+    #     description: "For quantal-response equilibria, including logit-response fixed-point computations."
     # testimonials:
     #   - name: "Professor X"
     #     role: "Professor of Game Theory, University of Cambridge"
@@ -69,18 +69,18 @@ params:
   navbar:
     - title: Team
       url: /team/
-    - title: Research
-      url: /research/
+    # - title: Research
+    #   url: /research/
+    - title: Documentation
+      url: "https://gambitproject.readthedocs.io/en/stable/"
+    - title: Releases
+      url: "https://github.com/gambitproject/gambit/releases"
     - title: Citing
       url: /cite/
     - title: Info
       sublinks:
-        - title: Documentation
-          url: "https://gambitproject.readthedocs.io/en/stable/"
         - title: GitHub
           url: "https://github.com/gambitproject/gambit"
-        - title: Releases
-          url: "https://github.com/gambitproject/gambit/releases"
         - title: PyGambit on PyPI
           url: "https://pypi.org/project/pygambit/"
   team:
@@ -119,20 +119,20 @@ params:
         role: "Research Associate"
         image: team/stephen.jpeg
         link: "https://ieeexplore.ieee.org/author/37086404209"
-      - name: "Yongzhao Wang"
-        affiliations: 
-          - "The Alan Turing Institute"
-        role: "Former Research Associate"
-        image: team/yongzhao.png
-        link: "https://sites.google.com/umich.edu/yongzhao-wang/"
-    research:
-      title: "Selected Research Projects Using Gambit"
-      # description: "A variety of research projects using Gambit are currently underway, exploring new methods for game-theoretic analysis, applications in AI, and the development of novel algorithms."
-      projects:
-        - title: "Automated analysis of strategic interactions"
-          institution: "The Alan Turing Institute"
-          description: "Creating the tools to support strategic reasoning about interactions among human and automated agents in complex and changing environments."
-          link: "https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions"
+      # - name: "Yongzhao Wang"
+      #   affiliations: 
+      #     - "The Alan Turing Institute"
+      #   role: "Former Research Associate"
+      #   image: team/yongzhao.png
+      #   link: "https://sites.google.com/umich.edu/yongzhao-wang/"
+    # research:
+    #   title: "Selected Research Projects Using Gambit"
+    #   # description: "A variety of research projects using Gambit are currently underway, exploring new methods for game-theoretic analysis, applications in AI, and the development of novel algorithms."
+    #   projects:
+    #     - title: "Automated analysis of strategic interactions"
+    #       institution: "The Alan Turing Institute"
+    #       description: "Creating the tools to support strategic reasoning about interactions among human and automated agents in complex and changing environments."
+    #       link: "https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions"
   footer:
     logo: gambit.png
     socialmediatitle:
