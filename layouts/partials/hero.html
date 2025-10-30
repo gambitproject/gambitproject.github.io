@@ -84,16 +84,16 @@
                 </div>
                 {{ end }}
 
-                <!-- Solver section -->
-                {{- $solversTitle := index $hero "solvers_title" }}
-                {{ if $solversTitle }}
-                <div class="hero-title">{{ $solversTitle }}</div>
+                <!-- What is Gambit? section -->
+                {{- $whatgambitTitle := index $hero "whatgambit_title" }}
+                {{ if $whatgambitTitle }}
+                <div class="hero-title">{{ $whatgambitTitle }}</div>
                 {{ end }}
-                {{- $solvers := index $hero "solvers" }}
-                {{ if $solvers }}
+                {{- $whatgambit := index $hero "whatgambit" }}
+                {{ if $whatgambit }}
                 <div class="software-icons">
                     <div class="software-grid">
-                        {{- range $solvers }}
+                        {{- range $whatgambit }}
                         <div class="software-item">
                             {{ if .link }}
                             <a href="{{ .link }}" aria-label="{{ .name }}">

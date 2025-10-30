@@ -49,8 +49,8 @@ params:
       # - name: LLM tools
       #   description: "🏗️ WIP: Construct extensive games using our language model framework."
       #   icon: llm.png
-    solvers_title: "Gambit in a nutshell"
-    solvers:
+    whatgambit_title: "Gambit in a nutshell"
+    whatgambit:
       - name: Non-cooperative finite games
         description: "Construct games in extensive or strategic form"
       - name: Nash Equilibria computation
