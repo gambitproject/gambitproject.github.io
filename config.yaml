@@ -49,7 +49,7 @@ params:
       # - name: LLM tools
       #   description: "🏗️ WIP: Construct extensive games using our language model framework."
       #   icon: llm.png
-    solvers_title: "State of the art methods"
+    solvers_title: "Gambit in a nutshell"
     solvers:
       - name: Non-cooperative finite games
         description: "Construct games in extensive or strategic form"
@@ -59,6 +59,8 @@ params:
         description: "Read and write games in standard file formats"
       - name: Extensible architecture
         description: "Integrate new algorithms and improvements"
+      - name: Open source community
+        description: "Developed by a core team with contributions from researchers worldwide"
     # testimonials:
     #   - name: "Professor X"
     #     role: "Professor of Game Theory, University of Cambridge"
