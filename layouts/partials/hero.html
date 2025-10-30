@@ -101,7 +101,7 @@
                                 {{ if .icon }}
                                 <img src="/images/{{ .icon }}" alt="{{ .name }} icon" class="software-icon">
                                 {{ else }}
-                                <div class="software-icon-fallback">{{ substr .name 0 1 }}</div>
+                                <!-- <div class="software-icon-fallback">{{ substr .name 0 1 }}</div> -->
                                 {{ end }}
                                 <div class="software-name">{{ .name }}</div>
                                 <div class="software-description">{{ .description }}</div>

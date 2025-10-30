@@ -52,15 +52,17 @@ params:
     whatgambit_title: "Gambit in a nutshell"
     whatgambit:
       - name: Non-cooperative finite games
-        description: "Construct games in extensive or strategic form"
+        description: "Construct games in extensive or strategic form."
       - name: Nash Equilibria computation
-        description: "Enumerate pure and mixed-strategy Nash equilibria"
+        description: "Enumerate pure and mixed-strategy Nash equilibria."
       - name: Interoperable with other tools
-        description: "Read and write games in standard file formats"
+        description: "Read and write games in standard file formats."
       - name: Extensible architecture
-        description: "Integrate new algorithms and improvements"
+        description: "Easily integrate new algorithms and improvements."
       - name: Open source community
-        description: "Developed by a core team with contributions from researchers worldwide"
+        description: "Contributions from researchers worldwide."
+      - name: Easy to use
+        description: "Accessible via GUI, CLI, or Python API."
     # testimonials:
     #   - name: "Professor X"
     #     role: "Professor of Game Theory, University of Cambridge"
