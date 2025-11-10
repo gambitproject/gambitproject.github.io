@@ -265,6 +265,12 @@
    color: inherit;
 }
 
+/* Column separators between what-grid columns */
+.what-item:not(:first-child) {
+   border-left: 1.5px solid rgba(0,0,0,0.06);
+   padding-left: 1.5rem; /* give some breathing room from the divider */
+}
+
 .what-icon {
    margin-bottom: 15px;
    object-fit: contain;
@@ -327,6 +333,12 @@
 
    .what-description {
       font-size: 1.2em;
+   }
+
+   /* Remove column separators on small screens */
+   .what-item:not(:first-child) {
+      border-left: none;
+      padding-left: 0;
    }
 }
 
