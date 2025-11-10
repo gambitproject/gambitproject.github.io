@@ -91,20 +91,15 @@
                 {{ end }}
                 {{- $whatgambit := index $hero "whatgambit" }}
                 {{ if $whatgambit }}
-                <div class="software-icons">
-                    <div class="software-grid">
+                <div class="what-icons">
+                    <div class="what-grid">
                         {{- range $whatgambit }}
-                        <div class="software-item">
+                        <div class="what-item">
                             {{ if .link }}
                             <a href="{{ .link }}" aria-label="{{ .name }}">
                             {{ end }}
-                                {{ if .icon }}
-                                <img src="/images/{{ .icon }}" alt="{{ .name }} icon" class="software-icon">
-                                {{ else }}
-                                <!-- <div class="software-icon-fallback">{{ substr .name 0 1 }}</div> -->
-                                {{ end }}
-                                <div class="software-name">{{ .name }}</div>
-                                <div class="software-description">{{ .description }}</div>
+                                <div class="what-name">{{ .name }}</div>
+                                <div class="what-description">{{ .description }}</div>
                             {{ if .link }}
                             </a>
                             {{ end }}
