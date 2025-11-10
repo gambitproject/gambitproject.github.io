@@ -244,9 +244,9 @@
 
 .what-grid {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
+   grid-template-columns: repeat(5, 1fr);
    gap: 40px;
-   max-width: 800px;
+   max-width: 75%;
    margin: 0 auto;
    justify-items: center;
 }
@@ -254,8 +254,8 @@
 .what-item {
    display: flex;
    flex-direction: column;
-   align-items: center;
-   text-align: center;
+   align-items: left;
+   text-align: left;
    max-width: 450px;
    width: 100%;
 }
@@ -290,11 +290,11 @@
    font-weight: bold;
    color: #cc0000;
    margin-bottom: 8px;
-   font-size: 1.8em;
+   font-size: 1.3em;
 }
 
 .what-description {
-   font-size: 1.35em;
+   font-size: 1em;
    color: #666;
 }
 

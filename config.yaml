@@ -61,8 +61,6 @@ params:
         description: "Read and write games in standard file formats."
       - name: Open source & extensible
         description: "Easily integrate new algorithms."
-      - name: Easy to use
-        description: "Accessible via GUI, CLI, or Python API."
     # testimonials:
     #   - name: "Professor X"
     #     role: "Professor of Game Theory, University of Cambridge"
