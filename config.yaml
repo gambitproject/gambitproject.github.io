@@ -72,7 +72,7 @@ params:
     # - title: Research
     #   url: /research/
     - title: Install
-      url: /install/
+      url: "https://gambitproject.readthedocs.io/en/latest/install.html"
     - title: Documentation
       url: "https://gambitproject.readthedocs.io/en/stable/"
     - title: Team
