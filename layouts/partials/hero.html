@@ -84,27 +84,22 @@
                 </div>
                 {{ end }}
 
-                <!-- Solver section -->
-                {{- $solversTitle := index $hero "solvers_title" }}
-                {{ if $solversTitle }}
-                <div class="hero-title">{{ $solversTitle }}</div>
+                <!-- What is Gambit? section -->
+                {{- $whatgambitTitle := index $hero "whatgambit_title" }}
+                {{ if $whatgambitTitle }}
+                <div class="hero-title">{{ $whatgambitTitle }}</div>
                 {{ end }}
-                {{- $solvers := index $hero "solvers" }}
-                {{ if $solvers }}
-                <div class="software-icons">
-                    <div class="software-grid">
-                        {{- range $solvers }}
-                        <div class="software-item">
+                {{- $whatgambit := index $hero "whatgambit" }}
+                {{ if $whatgambit }}
+                <div class="what-icons">
+                    <div class="what-grid">
+                        {{- range $whatgambit }}
+                        <div class="what-item">
                             {{ if .link }}
                             <a href="{{ .link }}" aria-label="{{ .name }}">
                             {{ end }}
-                                {{ if .icon }}
-                                <img src="/images/{{ .icon }}" alt="{{ .name }} icon" class="software-icon">
-                                {{ else }}
-                                <div class="software-icon-fallback">{{ substr .name 0 1 }}</div>
-                                {{ end }}
-                                <div class="software-name">{{ .name }}</div>
-                                <div class="software-description">{{ .description }}</div>
+                                <div class="what-name">{{ .name }}</div>
+                                <div class="what-description">{{ .description }}</div>
                             {{ if .link }}
                             </a>
                             {{ end }}

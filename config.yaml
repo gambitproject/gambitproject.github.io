@@ -49,16 +49,18 @@ params:
       # - name: LLM tools
       #   description: "🏗️ WIP: Construct extensive games using our language model framework."
       #   icon: llm.png
-    # solvers_title: "State of the art methods"
-    # solvers:
-    #   - name: Nash Equilibrium Solvers
-    #     description: "Enumerate pure and mixed-strategy Nash equilibria, including Lemke-Howson, polytope methods."
-    #   - name: Extensive Form Solvers
-    #     description: "Leverage compact sequence-form representations for computing Nash or subgame-perfect equilibria in extensive games"
-    #   - name: Correlated & Refined Equilibrium Solvers
-    #     description: "LP-based computation of correlated equilibria and specialized tools for refinements like trembling-hand perfect or sequential equilibria."
-    #   - name: Numerical & Bounded-Rationality Solvers
-    #     description: "For quantal-response equilibria, including logit-response fixed-point computations."
+    whatgambit_title: "Gambit in a nutshell"
+    whatgambit:
+      - name: Non-cooperative finite games
+        description: "Construct games in extensive or strategic form."
+      - name: Equilibrium computation
+        description: "Find pure and mixed-strategy Nash equilibria."
+      - name: Econometric estimation
+        description: "Fit quantal response and other structural models."
+      - name: Interoperable with other tools
+        description: "Read and write games in standard file formats."
+      - name: Open source & extensible
+        description: "Analyse your game models your way."
     # testimonials:
     #   - name: "Professor X"
     #     role: "Professor of Game Theory, University of Cambridge"

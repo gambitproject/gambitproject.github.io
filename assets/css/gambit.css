@@ -230,6 +230,119 @@
    }
 }
 
+/* What is Gambit?  section */
+.what-icons {
+   margin: 40px 0;
+   text-align: center;
+}
+
+.what-icons h3 {
+   color: #cc0000;
+   margin-bottom: 20px;
+   font-family: 'Times New Roman', Times, serif;
+}
+
+.what-grid {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 40px;
+   max-width: 75%;
+   margin: 0 auto;
+   justify-items: center;
+   padding-bottom: 30px;
+}
+
+.what-item {
+   display: flex;
+   flex-direction: column;
+   align-items: left;
+   text-align: left;
+   max-width: 450px;
+   width: 100%;
+}
+
+.what-item a {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* Column separators between what-grid columns */
+.what-item:not(:first-child) {
+   border-left: 1.5px solid rgba(0,0,0,0.06);
+   padding-left: 1.5rem; /* give some breathing room from the divider */
+}
+
+.what-icon {
+   margin-bottom: 15px;
+   object-fit: contain;
+   width: 90px;
+   height: 90px;
+}
+
+.what-icon-fallback {
+   width: 90px;
+   height: 90px;
+   margin-bottom: 15px;
+   background-color: #cc0000;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   font-weight: bold;
+   font-size: 1.8em;
+}
+
+.what-name {
+   font-weight: bold;
+   color: #cc0000;
+   margin-bottom: 8px;
+   font-size: 1.3em;
+}
+
+.what-description {
+   font-size: 1em;
+   color: #666;
+}
+
+/* Responsive adjustments for what grid */
+@media (max-width: 768px) {
+   .what-grid {
+      grid-template-columns: 1fr !important;
+      gap: 40px;
+      max-width: 400px;
+   }
+
+   .what-item {
+      max-width: 350px;
+   }
+
+   .what-icon {
+      width: 75px;
+      height: 75px;
+   }
+
+   .what-icon-fallback {
+      width: 75px;
+      height: 75px;
+      font-size: 1.5em;
+   }
+
+   .what-name {
+      font-size: 1.5em;
+   }
+
+   .what-description {
+      font-size: 1.2em;
+   }
+
+   /* Remove column separators on small screens */
+   .what-item:not(:first-child) {
+      border-left: none;
+      padding-left: 0;
+   }
+}
+
 /* Testimonials section */
 .testimonials-section {
    margin: 60px 0;
