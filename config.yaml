@@ -67,6 +67,8 @@ params:
   navbar:
     # - title: Research
     #   url: /research/
+    - title: 🚀 Google Summer of Code 🚀 
+      url: /gsoc_2026/
     - title: Install
       url: "https://gambitproject.readthedocs.io/en/stable/install.html"
     - title: Documentation
