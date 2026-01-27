@@ -71,12 +71,12 @@ params:
       url: "https://gambitproject.readthedocs.io/en/stable/install.html"
     - title: Documentation
       url: "https://gambitproject.readthedocs.io/en/stable/"
-    - title: Team
-      url: /team/
-    - title: Citing
-      url: /cite/
-    - title: Info
+    - title: More
       sublinks:
+        - title: Team
+          url: /team/
+        - title: Citing
+          url: /cite/
         - title: GitHub
           url: "https://github.com/gambitproject/gambit"
         - title: PyGambit on PyPI
