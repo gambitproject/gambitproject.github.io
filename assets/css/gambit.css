@@ -463,6 +463,15 @@ nav,
   min-height: 7.6rem; /* was 3.8rem */
   transition: transform 0.3s ease-in-out;
   background-color: #1a9e7e;
+  color: white;
+}
+
+.navbar a,
+.navbar a:visited,
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active {
+   color: white !important;
 }
 
 .navbar.navbar-hidden {
