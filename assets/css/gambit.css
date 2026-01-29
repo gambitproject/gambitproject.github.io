@@ -545,11 +545,22 @@ nav,
   font-size: 1.75rem; /* was 0.875rem */
   padding-bottom: 1rem; /* was 0.5rem */
   padding-top: 1rem; /* was 0.5rem */
+  background-color: #1a9e7e;
+  border: none;
+  /* removes Bulma’s dropdown border */
+  box-shadow: none;
+  /* optional: cleaner flat look */
 }
 
 .navbar-dropdown .navbar-item {
   padding-left: 3rem; /* was 1.5rem */
   padding-right: 3rem; /* was 1.5rem */
+  color: white;
+}
+
+.navbar-dropdown .navbar-item:hover {
+   background-color: rgba(255, 255, 255, 0.15);
+   color: white;
 }
 
 .navbar-item.has-dropdown .navbar-link:after {
