@@ -1,5 +1,5 @@
 .hero-title {
-   color: #cc0000;
+   color: #1a9e7e;
    font-weight: bold;
    font-size: 7em;
    font-family: "Computer Modern", serif;
@@ -137,7 +137,7 @@
 }
 
 .software-icons h3 {
-   color: #cc0000;
+   color: #1a9e7e;
    margin-bottom: 20px;
    font-family: 'Times New Roman', Times, serif;
 }
@@ -176,7 +176,7 @@
    width: 90px;
    height: 90px;
    margin-bottom: 15px;
-   background-color: #cc0000;
+   background-color: #1a9e7e;
    border-radius: 50%;
    display: flex;
    align-items: center;
@@ -188,7 +188,7 @@
 
 .software-name {
    font-weight: bold;
-   color: #cc0000;
+   color: #1a9e7e;
    margin-bottom: 8px;
    font-size: 1.8em;
 }
@@ -237,7 +237,7 @@
 }
 
 .what-icons h3 {
-   color: #cc0000;
+   color: #1a9e7e;
    margin-bottom: 20px;
    font-family: 'Times New Roman', Times, serif;
 }
@@ -283,7 +283,7 @@
    width: 90px;
    height: 90px;
    margin-bottom: 15px;
-   background-color: #cc0000;
+   background-color: #1a9e7e;
    border-radius: 50%;
    display: flex;
    align-items: center;
@@ -295,7 +295,7 @@
 
 .what-name {
    font-weight: bold;
-   color: #cc0000;
+   color: #1a9e7e;
    margin-bottom: 8px;
    font-size: 1.3em;
 }
@@ -380,7 +380,7 @@
 
 .quote-mark {
    font-size: 4rem;
-   color: #cc0000;
+   color: #1a9e7e;
    font-family: 'Times New Roman', serif;
    position: absolute;
    top: -20px;
@@ -409,7 +409,7 @@
 
 .author-name {
    font-weight: bold;
-   color: #cc0000;
+   color: #1a9e7e;
    font-size: 1.1em;
    margin-bottom: 5px;
 }
@@ -454,7 +454,7 @@
 }
 
 button.cta-button {
-   background-color: #cc0000;
+   background-color: #1a9e7e;
 }
 
 /* Navbar size overwrites - double the size of everything */
@@ -462,6 +462,7 @@ nav,
 .navbar {
   min-height: 7.6rem; /* was 3.8rem */
   transition: transform 0.3s ease-in-out;
+  background-color: #1a9e7e;
 }
 
 .navbar.navbar-hidden {
@@ -495,6 +496,7 @@ nav,
 .navbar-link {
   padding: 1rem 1.5rem; /* was 0.5rem 0.75rem */
   font-size: 1.2rem; /* added for better scaling */
+  color: white;
 }
 
 /* Specifically target dropdown parent links to never show underlines */
@@ -642,7 +644,7 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
 .research-header {
    text-align: center;
    margin: 2rem 0;
-   color: #cc0000;
+   color: #1a9e7e;
    font-size: 2.5em;
    font-weight: bold;
 }
@@ -676,13 +678,13 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
    transition: transform 0.3s ease, box-shadow 0.3s ease;
    border: 2px solid transparent;
-   border-left: 4px solid #cc0000;
+   border-left: 4px solid #1a9e7e;
 }
 
 .research-project:hover {
    transform: translateY(-5px);
    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-   border-color: #cc0000;
+   border-color: #1a9e7e;
 }
 
 .research-project-link {
@@ -696,7 +698,7 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
 }
 
 .research-project-title {
-   color: #cc0000;
+   color: #1a9e7e;
    font-size: 1.4em;
    margin-bottom: 1rem;
    font-weight: bold;
@@ -741,7 +743,7 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
 }
 
 #footer {
-   background-color: #cc0000;
+   background-color: #1a9e7e;
 }
 
 /* Team page styles */
@@ -783,7 +785,7 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
 .team-member:hover {
    transform: translateY(-5px);
    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-   border-color: #cc0000;
+   border-color: #1a9e7e;
 }
 
 .team-member-link {
@@ -802,7 +804,7 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
    margin: 0 auto 1.5rem;
    border-radius: 50%;
    overflow: hidden;
-   border: 4px solid #cc0000;
+   border: 4px solid #1a9e7e;
 }
 
 .team-member-image img {
@@ -812,7 +814,7 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
 }
 
 .team-member-name {
-   color: #cc0000;
+   color: #1a9e7e;
    font-size: 1.4em;
    margin-bottom: 1rem;
    font-weight: bold;
