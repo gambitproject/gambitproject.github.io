@@ -10,19 +10,19 @@ markup:
     noClasses: false
 
 params:
-  navColor: red
   images:
-    - /images/gambit.png
+    - /images/logos/Gambit_logo_landscape_white_font_no_outline.png
+    - /images/logos/Gambit_logo_portrait_green_font_outline.png
   fonts:
     - name: "Lato"
       weights: [400, 900]
   navbarlogo:
-    image: gambit.png
+    image: logos/Gambit_logo_landscape_white_font_no_outline.png
     link: /
   hero:
     title: Software tools for game theory.
     subtitle: Build, analyse, and explore finite extensive and strategic form games.
-    image: gambit.png
+    image: logos/Gambit_logo_portrait_green_font_outline.png
     buttontext: Get started
     buttonlink: "https://gambitproject.readthedocs.io/en/stable/"
     description:
@@ -132,7 +132,7 @@ params:
     #       description: "Creating the tools to support strategic reasoning about interactions among human and automated agents in complex and changing environments."
     #       link: "https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions"
   footer:
-    logo: gambit.png
+    logo: logos/Gambit_logo_landscape_white_font_no_outline.png
     socialmediatitle:
     socialmedia:
       - link: https://twitter.com/thegambitproj
