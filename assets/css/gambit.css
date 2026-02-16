@@ -879,3 +879,16 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
       font-size: 1.2em;
    }
 }
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+   margin-bottom: 1rem;
+}
+
+th,
+td {
+   border: 1px solid var(--pst-color-border);
+   padding: 0.5rem;
+   text-align: left;
+}
