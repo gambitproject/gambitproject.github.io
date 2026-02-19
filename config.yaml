@@ -20,7 +20,7 @@ params:
     image: logos/Gambit_logo_landscape_white_font_no_outline.png
     link: /
   hero:
-    title: Software tools for game theory.
+    title: The package for computation in game theory
     subtitle: Build, analyse, and explore finite extensive and strategic form games.
     image: logos/Gambit_logo_portrait_green_font_outline.png
     buttontext: Get started
