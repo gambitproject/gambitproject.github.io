@@ -38,6 +38,17 @@
 
 .hero-description-item + .hero-description-item { margin-top: 1rem; }
 
+/* Responsive hero adjustments */
+@media (max-width: 768px) {
+   .hero-title {
+      font-size: 3.5em;
+      padding-top: 25px;
+   }
+   .hero-subtitle {
+      font-size: 1.75em;
+   }
+}
+
 /* GitHub buttons container */
 .github-buttons {
    margin: 20px 0;
@@ -348,11 +359,11 @@
    }
 
    .what-name {
-      font-size: 1.5em;
+      font-size: 1.2em;
    }
 
    .what-description {
-      font-size: 1.2em;
+      font-size: 1em;
    }
 
    /* Remove column separators on small screens */
