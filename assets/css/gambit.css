@@ -621,6 +621,31 @@ nav,
   }
 }
 
+@media screen and (max-width: 1023px) {
+  .navbar-menu.is-active {
+    background-color: var(--color-primary);
+  }
+
+  .navbar-item.has-dropdown {
+    padding: 0;
+  }
+
+  .navbar-item.has-dropdown .navbar-dropdown {
+    /* Reset dropdown to be an expandable list on mobile */
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  .navbar-dropdown .navbar-item {
+    /* Add indentation for items within the mobile dropdown */
+    padding-left: 2.5rem;
+  }
+}
+
 /* Custom dropdown arrow styling - work with arrow from config */
 .navbar-item.has-dropdown .navbar-link {
   position: relative;
