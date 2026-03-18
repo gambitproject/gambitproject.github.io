@@ -9,7 +9,7 @@
 }
 
 .hero-subtitle {
-   color: #442020;
+   color: #770505;
    font-size: 3em;
    font-family: "Computer Modern", serif;
    max-width: 100%;
@@ -315,6 +315,7 @@
 
    .what-item {
       max-width: 350px;
+      padding: 0;
    }
 
    .what-icon {
@@ -891,4 +892,125 @@ td {
    border: 1px solid var(--pst-color-border);
    padding: 0.5rem;
    text-align: left;
+}
+
+
+
+
+/* Edits */
+
+@media (max-width: 1165px) {
+   .hero-info-section {
+      margin: 30px 0;
+      padding: 0 15px;
+   }
+   
+   .info-content {
+      flex-direction: column;
+      text-align: center;
+      max-width: 95%;
+      gap: 1.5rem;
+   }
+}
+
+
+
+@media (max-width: 1100px) {
+
+   .info-content{
+      margin-top: 10px;
+      padding: 0;
+   }
+
+  .what-icons {
+   margin: 40px -10px;
+   text-align: center;
+}
+
+.what-grid {
+   display: flex;
+   gap: 20px;
+   max-width: 500px;
+   margin: 0 100px;
+   text-align: center;
+   padding-bottom: 30px;
+}
+}
+
+@media (max-width: 900px) {
+   .what-icons {
+      margin: 40px 0;
+      text-align: center;
+   }
+
+   .what-grid {
+      grid-template-columns: 1fr !important;
+      display: grid;
+      gap: 40px;
+      max-width: 400px;
+      margin: 0 auto;
+   }
+
+   .what-item {
+      max-width: 350px;
+      padding: 0;
+   }
+
+   .what-icon {
+      width: 75px;
+      height: 75px;
+   }
+
+   .what-icon-fallback {
+      width: 75px;
+      height: 75px;
+      font-size: 1.5em;
+   }
+
+   .what-name {
+      font-size: 1.5em;
+   }
+
+   .what-description {
+      font-size: 1.2em;
+   }
+
+   /* Remove column separators on small screens */
+   .what-item:not(:first-child) {
+      border-left: none;
+      padding-left: 0;
+   }
+}
+
+@media (max-width: 890px) {
+   .hero-title{
+      font-size: 90px;
+      line-height: 100px;
+   }
+   .hero-subtitle{
+      font-size: 30px;
+   }
+
+   .software-grid{
+      gap: 20px;
+   }
+}
+
+@media (max-width: 640px) {
+.hero-title{
+      font-size: 50px;
+      line-height: 70px;
+   }
+}
+
+@media (max-width: 470px) {
+   .hero-info-section{
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+   }
+   .info-content{
+      padding: 0;
+      margin: auto;
+   }
 }
