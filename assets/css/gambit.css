@@ -949,3 +949,33 @@ td {
    padding: 0.5rem;
    text-align: left;
 }
+
+
+.image-box {
+  width: 240px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+}
+
+.image-box.right {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+}
+
+.image-box.left {
+  float: left;
+  margin: 0 1.5rem 1rem 0;
+}
+
+.image-box img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.image-box p {
+  margin: 0;
+  font-size: 0.9rem;
+}
