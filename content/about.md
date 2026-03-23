@@ -29,7 +29,6 @@ The principal developers of Gambit have been:
     title="Gambit logo (1990s-2025)"
     align="left"
 >}}
->  
 
 
 Much of the development of the main Gambit codebase took place in
