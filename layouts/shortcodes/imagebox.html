@@ -1,0 +1,9 @@
+<div class="image-box {{ with .Get "align" }}{{ . }}{{ else }}right{{ end }}">
+  <img
+    src="{{ .Get "src" }}"
+    alt="{{ .Get "alt" }}"
+  >
+  {{ with .Get "title" }}
+    <p>{{ . }}</p>
+  {{ end }}
+</div>
