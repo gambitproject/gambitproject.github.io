@@ -4,6 +4,13 @@ title: About Gambit
 
 
 
+The Gambit Project was founded in the mid-1980s by Richard McKelvey at
+the California Institute of Technology. The original implementation
+was written in BASIC, with a simple graphical interface. This code was
+ported to C around 1990 with the help of Bruce Bell, and was
+distributed publicly as version 0.13 in 1991 and 1992.
+
+
 The principal developers of Gambit have been:
 
 * [Theodore Turocy](http://www.gambit-project.org/turocy),
@@ -49,11 +56,6 @@ include:
   Google Research Award to Leyton-Brown.
 
 
-The Gambit Project was founded in the mid-1980s by Richard McKelvey at
-the California Institute of Technology. The original implementation
-was written in BASIC, with a simple graphical interface. This code was
-ported to C around 1990 with the help of Bruce Bell, and was
-distributed publicly as version 0.13 in 1991 and 1992.
 
 A major step in the evolution of Gambit took place with the awarding
 of the NSF grants in 1994, with McKelvey and Andrew McLennan as
