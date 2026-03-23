@@ -16,6 +16,11 @@ The principal developers of Gambit have been:
   development, developer and maintainer of polynomial-based algorithms
   for equilibrium computation.
 
+<div style="float: right; width: 240px; margin: 0 0 1em 1.5em; padding: 0.5em; border: 1px solid #ccc; background: #f8f8f8;">
+  <img src="/images/gambit.png" alt="Gambit's historical logo" style="max-width: 100%; height: auto; display: block; margin-bottom: 0.5em;">
+  <p style="margin: 0;">Gambit logo (1990s-2025)</p>
+</div>
+
 Much of the development of the main Gambit codebase took place in
 1994-1996, under a grant from the National Science Foundation to the
 California Institute of Technology and the University of Minnesota
