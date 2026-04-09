@@ -46,16 +46,19 @@ Gambit has participated in **Google Summer of Code** in 2011 and 2012.
 Early versions of what is now PyGambit were developed with GSoC support
 through the projects of **Alessandro Andrioni** and **Stephen Kunath**.
 
-Gambit has also supported the development of **Game Theory Explorer (GTE)** which allows users to
-create extensive- and strategic-form games in a web browser, and to solve two-player versions
-of these games. GTE was started by Bernhard von Stengel and his soon-to-be PhD student **Rahul
-Savani** in summer 2001. Development for the GTE project was financially supported by STICERD
-research grants and an LSE Impact Case Study Fund from the London School of Economics, and by the
-Google Summer of Code 2011, 2012, 2014, 2016 as part of Gambit. Major contributions to earlier 
-versions of GTE were made by 
-**Mark Egesdal**, **Alfonso Gomez-Jordana**, **Martin Prause**, **Karen Bletzer**, and **Amelie Heliou**.
-The current version of GTE was
-developed by **Martin Antonov** with financial support from the LSE Impact Case Study Fund (2018-2020).
+Gambit has also supported the development of **Game Theory Explorer (GTE)**,
+which allows users to create extensive- and strategic-form games in a web browser, 
+and to solve two-player versions of these games. 
+GTE was started by Bernhard von Stengel and his soon-to-be PhD student **Rahul
+Savani** in summer 2001. 
+Development for the GTE project was financially supported by STICERD
+research grants and an LSE Impact Case Study Fund from the London School of Economics, 
+and by the Google Summer of Code 2011, 2012, 2014, 2016 as part of Gambit. 
+Major contributions to earlier versions of GTE were made by 
+**Mark Egesdal**, **Alfonso Gomez-Jordana**, **Martin Prause**, **Karen Bletzer**, 
+and **Amelie Heliou**.
+The current version of GTE was developed by **Martin Antonov** 
+with financial support from the LSE Impact Case Study Fund (2018-2020).
 
 Gambit's support for Action Graph Games was contributed by
 **Navin Bhat**, **Albert Jiang**, **Kevin Leyton-Brown**, and **David Thompson**, with funding support
