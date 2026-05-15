@@ -2,77 +2,118 @@
 <section class="content-padding">
   <div class="content-container">
     {{ partial "breadcrumbs.html" . }}
-    
+
     {{/* Check if this is the team page */}}
     {{ if eq .File.BaseFileName "team" }}
-      {{- $team := .Site.Params.team }}
-      {{ with $team.title }}
-      <h1 class="team-header">{{ . }}</h1>
-      {{ end }}
-      {{ with $team.description }}
-      <p class="team-description">{{ . }}</p>
-      {{ end }}
-      
-      {{ if $team.members }}
-      <div class="team-grid">
-        {{ range $team.members }}
-        <div class="team-member">
-          {{ if .link }}
-          <a href="{{ .link }}" target="_blank" rel="noopener" class="team-member-link">
-          {{ end }}
-            <div class="team-member-image">
-              <img src="{{ printf "/images/%s" .image | relURL }}" alt="{{ .name }}" />
-            </div>
-            <h3 class="team-member-name">{{ .name }}</h3>
-            <div class="team-member-affiliations">
-              {{ range .affiliations }}
-              <div class="team-member-affiliation">{{ . }}</div>
-              {{ end }}
-            </div>
-            <p class="team-member-role">{{ .role }}</p>
-          {{ if .link }}
-          </a>
+    {{- $team := .Site.Params.team }}
+    <h1 class="team-header">{{ .Title }}</h1>
+
+    {{/* GSoC Contributors Section */}}
+    {{ if $team.gsoc_contributors }}
+    {{ with $team.gsoc_contributors.title }}
+    <h2 class="team-header">{{ . }}</h2>
+    {{ end }}
+    <div class="gsoc-grid">
+      {{ range $team.gsoc_contributors.members }}
+      <div class="gsoc-member">
+        <div class="gsoc-member-image">
+          {{ if .image }}
+          <img src="{{ printf "/images/%s" .image | relURL }}" alt="{{ .name }}" />
+          {{ else }}
+          <div class="generic-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </div>
           {{ end }}
         </div>
+        <div class="gsoc-member-info">
+          <h3 class="gsoc-member-name">{{ .name }}</h3>
+          {{ with .project }}
+          <h4 class="gsoc-project-title">{{ . }}</h4>
+          {{ end }}
+          {{ with .description }}
+          <p class="gsoc-project-description">{{ . }}</p>
+          {{ end }}
+          {{ with .bio }}
+          <p class="gsoc-member-bio">{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    <hr class="section-divider" />
+    {{ end }}
+
+    {{ with $team.title }}
+    <h2 class="team-header">{{ . }}</h2>
+    {{ end }}
+    {{ with $team.description }}
+    <p class="team-description">{{ . }}</p>
+    {{ end }}
+
+    {{ if $team.members }}
+    <div class="team-grid">
+      {{ range $team.members }}
+      <div class="team-member">
+        {{ if .link }}
+        <a href="{{ .link }}" target="_blank" rel="noopener" class="team-member-link">
+          {{ end }}
+          <div class="team-member-image">
+            <img src="{{ printf "/images/%s" .image | relURL }}" alt="{{ .name }}" />
+          </div>
+          <h3 class="team-member-name">{{ .name }}</h3>
+          <div class="team-member-affiliations">
+            {{ range .affiliations }}
+            <div class="team-member-affiliation">{{ . }}</div>
+            {{ end }}
+          </div>
+          <p class="team-member-role">{{ .role }}</p>
+          {{ if .link }}
+        </a>
         {{ end }}
       </div>
       {{ end }}
+    </div>
+    {{ end }}
     {{ else if eq .File.BaseFileName "research" }}
-      {{/* Research page */}}
-      {{- $research := .Site.Params.team.research }}
-      {{ with $research.title }}
-      <h1 class="research-header">{{ . }}</h1>
-      {{ end }}
-      {{ with $research.description }}
-      <p class="research-description">{{ . }}</p>
-      {{ end }}
-      
-      {{ if $research.projects }}
-      <div class="research-grid">
-        {{ range $research.projects }}
-        <div class="research-project">
-          {{ if .link }}
-          <a href="{{ .link }}" target="_blank" rel="noopener" class="research-project-link">
+    {{/* Research page */}}
+    {{- $research := .Site.Params.team.research }}
+    {{ with $research.title }}
+    <h1 class="research-header">{{ . }}</h1>
+    {{ end }}
+    {{ with $research.description }}
+    <p class="research-description">{{ . }}</p>
+    {{ end }}
+
+    {{ if $research.projects }}
+    <div class="research-grid">
+      {{ range $research.projects }}
+      <div class="research-project">
+        {{ if .link }}
+        <a href="{{ .link }}" target="_blank" rel="noopener" class="research-project-link">
           {{ end }}
-            <h3 class="research-project-title">{{ .title }}</h3>
-            <div class="research-project-institution">{{ .institution }}</div>
-            <p class="research-project-description">{{ .description }}</p>
+          <h3 class="research-project-title">{{ .title }}</h3>
+          <div class="research-project-institution">{{ .institution }}</div>
+          <p class="research-project-description">{{ .description }}</p>
           {{ if .link }}
-          </a>
-          {{ end }}
-        </div>
+        </a>
         {{ end }}
       </div>
       {{ end }}
+    </div>
+    {{ end }}
     {{ else }}
-      {{/* Default content for non-team pages */}}
-      <h1>{{ .Title }}</h1>
-      {{ if .Params.Subtitle }}
-      <h5 class="subtitle">{{ .Params.Subtitle }}</h5>
-      {{ end }}
-      <div>
-        {{ .Content }}
-      </div>
+    {{/* Default content for non-team pages */}}
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.Subtitle }}
+    <h5 class="subtitle">{{ .Params.Subtitle }}</h5>
+    {{ end }}
+    <div>
+      {{ .Content }}
+    </div>
     {{ end }}
   </div>
   {{ partial "shortcuts.html" . }}
