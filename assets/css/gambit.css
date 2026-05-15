@@ -908,6 +908,13 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
    margin-bottom: 0.25rem;
 }
 
+.team-member-role {
+   color: var(--color-text-dark);
+   font-size: 1em;
+   line-height: 1.4;
+   margin: 0;
+}
+
 /* GSoC Contributor styles */
 
 .gsoc-grid {
