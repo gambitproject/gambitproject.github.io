@@ -69,14 +69,14 @@ params:
     #   url: /research/
     # - title: 🚀 Google Summer of Code 🚀 
     #   url: /gsoc_2026/
+    - title: 🚀 Team 🚀
+      url: /team/
     - title: Install
       url: "https://gambitproject.readthedocs.io/en/stable/install.html"
     - title: Documentation
       url: "https://gambitproject.readthedocs.io/en/stable/"
     - title: More
       sublinks:
-        - title: Team
-          url: /team/
         - title: History
           url: /history/
         - title: Citing
@@ -88,6 +88,24 @@ params:
   team:
     title: "The Gambit Development Team"
     description: "Gambit is developed and maintained by a core team at The Alan Turing Institute, with contributions from the wider community."
+    gsoc_contributors:
+      title: "Google Summer of Code Contributors"
+      members:
+        - name: "Amelie Kleber"
+          image: team/Amelie.jpg
+          project: "Gambit Interoperability with SageMath"
+          description: "This project aims to enable SageMath to natively use Gambit’s functionality within its game-theory features, allowing seamless conversion between SageMath and Gambit Game objects and the application of each library’s tools to the other’s representations. A draft SageMath pull request already exists that handles packaging and import updates for pygambit, but the core task of updating SageMath’s game theory code to Gambit’s revised 16.6 API remains open. This project will complete and merge that PR, then produce tutorial and documentation materials that demonstrate what the integration enables and how to leverage it."
+          bio: "Amelie Kleber is an Information Systems student at the Technical University of Munich. She recently completed her bachelor's thesis at the intersection of game theory and machine learning. In her free time, she loves to hike, ski, and cook."
+        - name: "Andrés Fernández Cervell"
+          image: team/andres.JPG
+          project: "Implementing the Herings & Peeters Differentiable Homotopy in Gambit"
+          description: "The predictive power of game-theoretic analysis in n-person games is frequently undermined by the vast multiplicity of Nash equilibria. VISION: This project will implement the globally convergent, everywhere differentiable homotopy algorithm proposed by Herings & Peeters (2001) into the Gambit C++ core and expose it via the PyGambit API. It will be the first algorithm in Gambit repository that reaches a Nash Equilibrium taking into account a subjective Prior, which is critical for providing realistic context to game-theoretic models. DELIVERABLES: • Securing the Path-Tracking Foundation (Issue #492): Based on my mentor's feedback regarding my previous work on the logit_solve path-following methods, I will implement a configurable perturbation system, add a bifurcation logging mechanism. • Variable Transformation & System Definition. • Analytical Jacobian & Path Tracking Engine: I will abstract the existing Allgower-Georg path-tracking code to work with the H&P algorithm, ensuring that it can be easily substituted in the future by alternative solvers such as HOMPACK. I will also code the analytical Jacobian matrix. • PyGambit API Integration: I will write the necessary bindings to expose the C++ solver to Python. • Testing & Performance Benchmarking."
+          bio: "Andrés Fernández Cervell is a second-year undergraduate student pursuing a Double Degree in Mathematics and Computer Science at the Universidad de Granada (Spain). His main interest lies in applying abstract mathematical theory to real-world problems through high-performance scientific software. "
+        - name: "Natalie Mesablishvili"
+          image: ""
+          project: "Development and integration of Lemke’s algorithm package"
+          description: "Lemke's algorithm is a method for solving Linear Complementarity Problems (LCPs). Computing equilibria for two-player games can be reduced to solving such problems. The Gambit library already has a C++ implementation of Lemke's algorithm, but the goal of this project is to improve and integrate Bernhard von Stengel's Lemke package written in Python. The current package works primarily as a standalone CLI tool, with algorithm logic, file I/O, and console output all tightly coupled. This project will transform it into a dual-purpose package – usable both from the command line and as an importable Python library that Gambit can directly call."
+          bio: "Natalie Mesablishvili"
     members:
       - name: "Theodore Turocy"
         affiliations: 

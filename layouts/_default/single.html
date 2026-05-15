@@ -6,8 +6,47 @@
     {{/* Check if this is the team page */}}
     {{ if eq .File.BaseFileName "team" }}
       {{- $team := .Site.Params.team }}
+      
+      {{/* GSoC Contributors Section */}}
+      {{ if $team.gsoc_contributors }}
+        {{ with $team.gsoc_contributors.title }}
+        <h1 class="team-header">{{ . }}</h1>
+        {{ end }}
+        <div class="gsoc-grid">
+          {{ range $team.gsoc_contributors.members }}
+          <div class="gsoc-member">
+            <div class="gsoc-member-image">
+              {{ if .image }}
+              <img src="{{ printf "/images/%s" .image | relURL }}" alt="{{ .name }}" />
+              {{ else }}
+              <div class="generic-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              {{ end }}
+            </div>
+            <div class="gsoc-member-info">
+              <h3 class="gsoc-member-name">{{ .name }}</h3>
+              {{ with .project }}
+              <h4 class="gsoc-project-title">{{ . }}</h4>
+              {{ end }}
+              {{ with .description }}
+              <p class="gsoc-project-description">{{ . }}</p>
+              {{ end }}
+              {{ with .bio }}
+              <p class="gsoc-member-bio"><strong>Bio: </strong>{{ . }}</p>
+              {{ end }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+        <hr class="section-divider" />
+      {{ end }}
+
       {{ with $team.title }}
-      <h1 class="team-header">{{ . }}</h1>
+      <h2 class="team-header">{{ . }}</h2>
       {{ end }}
       {{ with $team.description }}
       <p class="team-description">{{ . }}</p>
