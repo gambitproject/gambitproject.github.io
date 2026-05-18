@@ -57,7 +57,7 @@
     {{ if $team.core_team }}
     <h2 class="team-header">Lead developers</h2>
     <div class="team-grid">
-      {{ range $team.core_team }}
+      {{ range $team.core_team.members }}
       <div class="team-member">
         {{ if .link }}
         <a href="{{ .link }}" target="_blank" rel="noopener" class="team-member-link">
