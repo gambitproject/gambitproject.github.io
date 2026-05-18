@@ -139,6 +139,12 @@ params:
         role: "Research Associate"
         image: team/stephen.jpeg
         link: "https://ieeexplore.ieee.org/author/37086404209"
+      - name: "Bernhard von Stengel"
+        affiliations:
+          - "London School of Economics"
+        role: "Professor of Mathematics"
+        image: team/Bernhard.jpg
+        link: "http://www.maths.lse.ac.uk/personal/stengel/"
       # - name: "Yongzhao Wang"
       #   affiliations: 
       #     - "The Alan Turing Institute"
