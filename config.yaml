@@ -89,7 +89,7 @@ params:
     title: "The Gambit Development Team"
     description: "Gambit is developed and maintained by a core team at The Alan Turing Institute, with contributions from the wider community."
     gsoc_contributors:
-      title: "Google Summer of Code Contributors"
+      title: "2026 Google Summer of Code Contributors"
       members:
         - name: "Amelie Kleber"
           image: team/Amelie.jpg
