@@ -55,8 +55,8 @@
     {{ end }}
 
     {{ if $team.core_team }}
+    <h2 class="team-header">Lead developers</h2>
     <div class="team-grid">
-      <h2 class="team-header">Lead developers</h2>
       {{ range $team.core_team }}
       <div class="team-member">
         {{ if .link }}
@@ -81,8 +81,8 @@
     {{ end }}
       
     {{ if $team.members }}
+    <h2 class="team-header">Contributors</h2>
     <div class="team-grid">
-       <h2 class="team-header">Contributors</h2>
       {{ range $team.members }}
       <div class="team-member">
         {{ if .link }}
