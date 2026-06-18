@@ -109,6 +109,61 @@
                 </div>
                 {{ end }}
 
+                <!-- Visuals Slideshow Section -->
+                {{- $visuals := index $hero "visuals" }}
+                {{ if $visuals }}
+                {{ with $visuals.title }}
+                <div class="hero-title">{{ . }}</div>
+                {{ end }}
+                <div class="visuals-slideshow">
+                  <div class="visuals-track">
+                    {{- range $i, $slide := $visuals.slides }}
+                    <div class="visuals-slide{{ if eq $i 0 }} active{{ end }}">
+                      <img src="{{ printf "/images/%s" $slide.image | relURL }}" alt="{{ $slide.caption }}">
+                      {{ with $slide.caption }}
+                      <div class="visuals-caption">{{ . }}</div>
+                      {{ end }}
+                    </div>
+                    {{- end }}
+                  </div>
+                  <button class="visuals-btn visuals-prev" aria-label="Previous">&#8249;</button>
+                  <button class="visuals-btn visuals-next" aria-label="Next">&#8250;</button>
+                  <div class="visuals-dots">
+                    {{- range $i, $slide := $visuals.slides }}
+                    <span class="visuals-dot{{ if eq $i 0 }} active{{ end }}" data-index="{{ $i }}"></span>
+                    {{- end }}
+                  </div>
+                </div>
+                <script>
+                  (function() {
+                    const track = document.querySelector('.visuals-track');
+                    const slides = track ? track.querySelectorAll('.visuals-slide') : [];
+                    const dots   = document.querySelectorAll('.visuals-dot');
+                    let current = 0, timer;
+
+                    function show(n) {
+                      slides[current].classList.remove('active');
+                      dots[current].classList.remove('active');
+                      current = (n + slides.length) % slides.length;
+                      slides[current].classList.add('active');
+                      dots[current].classList.add('active');
+                    }
+
+                    function startTimer() {
+                      timer = setInterval(() => show(current + 1), 5000);
+                    }
+
+                    document.querySelector('.visuals-prev')?.addEventListener('click', () => { clearInterval(timer); show(current - 1); startTimer(); });
+                    document.querySelector('.visuals-next')?.addEventListener('click', () => { clearInterval(timer); show(current + 1); startTimer(); });
+                    dots.forEach((d, i) => d.addEventListener('click', () => { clearInterval(timer); show(i); startTimer(); }));
+                    document.querySelector('.visuals-slideshow')?.addEventListener('mouseenter', () => clearInterval(timer));
+                    document.querySelector('.visuals-slideshow')?.addEventListener('mouseleave', startTimer);
+
+                    if (slides.length > 1) startTimer();
+                  })();
+                </script>
+                {{ end }}
+
                 <!-- Testimonials Section -->
                 {{- $testimonials := index $hero "testimonials" }}
                 {{ if $testimonials }}
