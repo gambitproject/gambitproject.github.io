@@ -84,6 +84,7 @@
                     const track = document.querySelector('.visuals-track');
                     const slides = track ? track.querySelectorAll('.visuals-slide') : [];
                     const dots   = document.querySelectorAll('.visuals-dot');
+                    const interval = {{ mul ($visuals.interval_seconds | default 5) 1000 }};
                     let current = 0, timer;
 
                     function show(n) {
@@ -95,7 +96,7 @@
                     }
 
                     function startTimer() {
-                      timer = setInterval(() => show(current + 1), 5000);
+                      timer = setInterval(() => show(current + 1), interval);
                     }
 
                     document.querySelector('.visuals-prev')?.addEventListener('click', () => { clearInterval(timer); show(current - 1); startTimer(); });

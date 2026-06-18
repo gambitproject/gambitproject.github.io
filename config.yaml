@@ -30,6 +30,7 @@ params:
       - "The Gambit Project was founded in the mid-1980s at the California Institute of Technology and to this day is actively developed by a community of contributors, with core development led by [The Alan Turing Institute](https://www.turing.ac.uk) as part of its project: [Automated analysis of strategic interactions](https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions)."
     visuals:
       title: "Visualisations"
+      interval_seconds: 5
       slides:
         - image: visuals/kuhn-4-card.svg
           caption: "Extensive form representation of a 4-card Kuhn poker game, illustrating information sets and strategy nodes."
