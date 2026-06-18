@@ -54,61 +54,6 @@
                     </div>
                 </div>
 
-                <!-- Software section -->
-                {{- $softwareTitle := index $hero "software_title" }}
-                {{ if $softwareTitle }}
-                <div class="hero-title">{{ $softwareTitle }}</div>
-                {{ end }}
-                {{- $software := index $hero "software" }}
-                {{ if $software }}
-                <div class="software-icons">
-                    <div class="software-grid">
-                        {{- range $software }}
-                        <div class="software-item">
-                            {{ if .link }}
-                            <a href="{{ .link }}" aria-label="{{ .name }}">
-                                {{ end }}
-                                {{ if .icon }}
-                                <img src="/images/{{ .icon }}" alt="{{ .name }} icon" class="software-icon">
-                                {{ else }}
-                                <div class="software-icon-fallback">{{ substr .name 0 1 }}</div>
-                                {{ end }}
-                                <div class="software-name">{{ .name }}</div>
-                                <div class="software-description">{{ .description }}</div>
-                                {{ if .link }}
-                            </a>
-                            {{ end }}
-                        </div>
-                        {{- end }}
-                    </div>
-                </div>
-                {{ end }}
-
-                <!-- What is Gambit? section -->
-                {{- $whatgambitTitle := index $hero "whatgambit_title" }}
-                {{ if $whatgambitTitle }}
-                <div class="hero-title">{{ $whatgambitTitle }}</div>
-                {{ end }}
-                {{- $whatgambit := index $hero "whatgambit" }}
-                {{ if $whatgambit }}
-                <div class="what-icons">
-                    <div class="what-grid">
-                        {{- range $whatgambit }}
-                        <div class="what-item">
-                            {{ if .link }}
-                            <a href="{{ .link }}" aria-label="{{ .name }}">
-                            {{ end }}
-                                <div class="what-name">{{ .name }}</div>
-                                <div class="what-description">{{ .description }}</div>
-                            {{ if .link }}
-                            </a>
-                            {{ end }}
-                        </div>
-                        {{- end }}
-                    </div>
-                </div>
-                {{ end }}
-
                 <!-- Visuals Slideshow Section -->
                 {{- $visuals := index $hero "visuals" }}
                 {{ if $visuals }}
@@ -162,6 +107,61 @@
                     if (slides.length > 1) startTimer();
                   })();
                 </script>
+                {{ end }}
+
+                <!-- Software section -->
+                {{- $softwareTitle := index $hero "software_title" }}
+                {{ if $softwareTitle }}
+                <div class="hero-title">{{ $softwareTitle }}</div>
+                {{ end }}
+                {{- $software := index $hero "software" }}
+                {{ if $software }}
+                <div class="software-icons">
+                    <div class="software-grid">
+                        {{- range $software }}
+                        <div class="software-item">
+                            {{ if .link }}
+                            <a href="{{ .link }}" aria-label="{{ .name }}">
+                                {{ end }}
+                                {{ if .icon }}
+                                <img src="/images/{{ .icon }}" alt="{{ .name }} icon" class="software-icon">
+                                {{ else }}
+                                <div class="software-icon-fallback">{{ substr .name 0 1 }}</div>
+                                {{ end }}
+                                <div class="software-name">{{ .name }}</div>
+                                <div class="software-description">{{ .description }}</div>
+                                {{ if .link }}
+                            </a>
+                            {{ end }}
+                        </div>
+                        {{- end }}
+                    </div>
+                </div>
+                {{ end }}
+
+                <!-- What is Gambit? section -->
+                {{- $whatgambitTitle := index $hero "whatgambit_title" }}
+                {{ if $whatgambitTitle }}
+                <div class="hero-title">{{ $whatgambitTitle }}</div>
+                {{ end }}
+                {{- $whatgambit := index $hero "whatgambit" }}
+                {{ if $whatgambit }}
+                <div class="what-icons">
+                    <div class="what-grid">
+                        {{- range $whatgambit }}
+                        <div class="what-item">
+                            {{ if .link }}
+                            <a href="{{ .link }}" aria-label="{{ .name }}">
+                            {{ end }}
+                                <div class="what-name">{{ .name }}</div>
+                                <div class="what-description">{{ .description }}</div>
+                            {{ if .link }}
+                            </a>
+                            {{ end }}
+                        </div>
+                        {{- end }}
+                    </div>
+                </div>
                 {{ end }}
 
                 <!-- Testimonials Section -->
