@@ -57,9 +57,9 @@
                 <!-- Visuals Section -->
                 {{- $visuals := index $hero "visuals" }}
                 {{ if $visuals }}
-                {{ with $visuals.title }}
+                <!--- {{ with $visuals.title }}
                 <div class="hero-title">{{ . }}</div>
-                {{ end }}
+                {{ end }} -->
                 <div class="visuals-grid">
                   {{- range $visuals.slides }}
                   <div class="visuals-item">
