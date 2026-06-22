@@ -28,6 +28,21 @@ params:
     description:
       - "Gambit is a set of software tools for doing computation on finite, noncooperative games in extensive or strategy form and a set of file formats for storing and communicating games to external tools."
       - "The Gambit Project was founded in the mid-1980s at the California Institute of Technology and to this day is actively developed by a community of contributors, with core development led by [The Alan Turing Institute](https://www.turing.ac.uk) as part of its project: [Automated analysis of strategic interactions](https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions)."
+    visuals:
+      title: "Visualisations"
+      slides:
+        - image: visuals/kuhn-4-card.svg
+          caption: "Extensive form representation of a 4-card Kuhn poker game, illustrating information sets and strategy nodes."
+          link: ""
+        - image: visuals/test_image.jpg
+          caption: "Placeholder image."
+          link: ""
+        - image: visuals/test_image.jpg
+          caption: "Placeholder image 2."
+          link: ""
+        - image: visuals/test_image.jpg
+          caption: "Placeholder image 3."
+          link: ""
     software_title: "Open source & free to use"
     software:
       - name: PyGambit
