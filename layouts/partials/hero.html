@@ -62,12 +62,20 @@
                 {{ end }} -->
                 <div class="visuals-grid">
                   {{- range $visuals.slides }}
+                  {{ if .link }}
+                  <a href="{{ .link }}" class="visuals-item" target="_blank" rel="noopener">
+                  {{ else }}
                   <div class="visuals-item">
+                  {{ end }}
                     <img src="{{ printf "/images/%s" .image | relURL }}" alt="{{ .caption }}">
                     {{ with .caption }}
                     <div class="visuals-caption">{{ . }}</div>
                     {{ end }}
+                  {{ if .link }}
+                  </a>
+                  {{ else }}
                   </div>
+                  {{ end }}
                   {{- end }}
                 </div>
                 {{ end }}

@@ -33,12 +33,16 @@ params:
       slides:
         - image: visuals/kuhn-4-card.svg
           caption: "Extensive form representation of a 4-card Kuhn poker game, illustrating information sets and strategy nodes."
+          link: ""
         - image: visuals/test_image.jpg
           caption: "Placeholder image."
+          link: ""
         - image: visuals/test_image.jpg
           caption: "Placeholder image 2."
+          link: ""
         - image: visuals/test_image.jpg
           caption: "Placeholder image 3."
+          link: ""
     software_title: "Open source & free to use"
     software:
       - name: PyGambit
