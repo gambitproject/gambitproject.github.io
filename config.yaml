@@ -85,8 +85,8 @@ params:
           url: "https://github.com/gambitproject/gambit"
         - title: PyGambit on PyPI
           url: "https://pypi.org/project/pygambit/"
-        - title: DrawTree
-          url: "https://www.gambit-project.org/draw_tree"
+        - title: GTDraw
+          url: "https://www.gambit-project.org/gtdraw"
   team:
     title: "The Gambit Development Team"
     description: "Gambit is developed and maintained by a core team at The Alan Turing Institute, with contributions from the wider community."
