@@ -202,7 +202,7 @@
    max-width: 85%;
    margin: 0 auto;
    gap: 2rem;
-   padding-top: 5em;
+   padding-top: 1.5em;
 }
 
 .info-logo {
@@ -210,7 +210,7 @@
 }
 
 .info-logo img {
-   width: 35em;
+   width: 16em;
    height: auto;
    object-fit: contain;
 }
@@ -218,7 +218,6 @@
 .info-text {
    flex: 1;
    min-width: 0; /* Allow text to shrink */
-   font-size: 1.35em;
 }
 
 .info-text p {
@@ -592,7 +591,7 @@ button.cta-button {
 /* Navbar size overwrites - double the size of everything */
 nav,
 .navbar {
-  min-height: 7.6rem; /* was 3.8rem */
+  min-height: 5rem; /* was 3.8rem, then 7.6rem */
   transition: transform 0.3s ease-in-out;
   background-color: var(--color-primary);
   color: var(--color-white);
@@ -611,32 +610,32 @@ nav,
 }
 
 .navbar-brand {
-  min-height: 8rem; /* was 4rem */
+  min-height: 5rem; /* was 4rem, then 8rem */
 }
 
 .navbar .container {
-  min-height: 8rem; /* was 4rem */
+  min-height: 5rem; /* was 4rem, then 8rem */
 }
 
 .navbar-logo {
-  height: 56px; /* was 28px */
-  padding-right: 2rem; /* was 1rem */
+  height: 40px; /* was 28px, then 56px */
+  padding-right: 1.5rem; /* was 1rem, then 2rem */
 }
 
 .navbar-logo-text {
-  font-size: 2.5rem; /* was 1.25rem */
+  font-size: 1.75rem; /* was 1.25rem, then 2.5rem */
   font-weight: 700;
 }
 
 .navbar-brand img {
-  max-height: 72px !important; /* was 36px */
-  height: 72px; /* was 36px */
+  max-height: 48px !important; /* was 36px, then 72px */
+  height: 48px; /* was 36px, then 72px */
 }
 
 .navbar-item,
 .navbar-link {
-  padding: 1rem 1.5rem; /* was 0.5rem 0.75rem */
-  font-size: 1.2rem; /* added for better scaling */
+  padding: 0.75rem 1.25rem; /* was 0.5rem 0.75rem, then 1rem 1.5rem */
+  font-size: 1.1rem; /* was 1.2rem */
   color: white;
 }
 
@@ -647,35 +646,35 @@ nav,
 }
 
 .navbar-burger {
-  width: 8rem; /* was 4rem */
-  height: 8rem; /* was 4rem */
+  width: 5.5rem; /* was 4rem, then 8rem */
+  height: 5.5rem; /* was 4rem, then 8rem */
 }
 
 .navbar-burger span {
-  height: 4px; /* was 2px */
-  left: calc(50% - 16px); /* was calc(50% - 8px) */
-  width: 32px; /* was 16px */
+  height: 3px; /* was 2px, then 4px */
+  left: calc(50% - 12px); /* was calc(50% - 8px), then calc(50% - 16px) */
+  width: 24px; /* was 16px, then 32px */
 }
 
 .navbar-burger span:first-child {
-  top: calc(50% - 12px); /* was calc(50% - 6px) */
+  top: calc(50% - 9px); /* was calc(50% - 6px), then calc(50% - 12px) */
 }
 
 .navbar-burger span:nth-child(2) {
-  top: calc(50% - 2px); /* was calc(50% - 1px) */
+  top: calc(50% - 1.5px); /* was calc(50% - 1px), then calc(50% - 2px) */
 }
 
 .navbar-burger span:nth-child(3) {
-  top: calc(50% + 8px); /* was calc(50% + 4px) */
+  top: calc(50% + 6px); /* was calc(50% + 4px), then calc(50% + 8px) */
 }
 
 .navbar-item.has-dropdown {
-  padding: 20px 0; /* was 10px 0 */
+  padding: 14px 0; /* was 10px 0, then 20px 0 */
 }
 
 .navbar-dropdown {
-  font-size: 1.75rem; /* was 0.875rem */
-  padding-bottom: 1rem; /* was 0.5rem */
+  font-size: 1.3rem; /* was 0.875rem, then 1.75rem */
+  padding-bottom: 0.75rem; /* was 0.5rem, then 1rem */
   padding-top: 1rem; /* was 0.5rem */
   background-color: var(--color-primary);
   border: none;
@@ -923,6 +922,11 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
 
 #footer {
    background-color: var(--color-primary);
+   padding: 1.5rem 1.5rem 1.75rem;
+}
+
+:root {
+   --spht-footer-height: 11em; /* was 6em; matches the shorter #footer padding above */
 }
 
 /* Team page styles */
@@ -945,7 +949,8 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
 
 .team-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(300px, 320px));
+   justify-content: center;
    gap: 2rem;
    margin: 3rem 0;
    padding: 0 1rem;
@@ -1016,6 +1021,39 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
    font-size: 1em;
    line-height: 1.4;
    margin: 0;
+}
+
+/* Compact variant: smaller cards, three across on desktop */
+.team-grid--compact {
+   grid-template-columns: repeat(3, 1fr);
+   gap: 1.5rem;
+   max-width: 900px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.team-grid--compact .team-member {
+   padding: 1.25rem;
+}
+
+.team-grid--compact .team-member-image {
+   width: 80px;
+   height: 80px;
+   margin-bottom: 1rem;
+   border-width: 3px;
+}
+
+.team-grid--compact .team-member-name {
+   font-size: 1.1em;
+   margin-bottom: 0.5rem;
+}
+
+.team-grid--compact .team-member-affiliation {
+   font-size: 0.85em;
+}
+
+.team-grid--compact .team-member-role {
+   font-size: 0.9em;
 }
 
 /* GSoC Contributor styles */
@@ -1167,6 +1205,16 @@ nav[aria-label="Breadcrumb"], .nav[aria-label="Breadcrumb"] {
    
    .team-member-name {
       font-size: 1.2em;
+   }
+
+   .team-grid--compact {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+   }
+
+   .team-grid--compact .team-member-image {
+      width: 70px;
+      height: 70px;
    }
 }
 

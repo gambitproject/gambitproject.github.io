@@ -80,9 +80,35 @@
     </div>
     {{ end }}
       
+    {{ if $team.core_contributors }}
+    <h2 class="team-header">Core contributors</h2>
+    <div class="team-grid">
+      {{ range $team.core_contributors.members }}
+      <div class="team-member">
+        {{ if .link }}
+        <a href="{{ .link }}" target="_blank" rel="noopener" class="team-member-link">
+          {{ end }}
+          <div class="team-member-image">
+            <img src="{{ printf "/images/%s" .image | relURL }}" alt="{{ .name }}" />
+          </div>
+          <h3 class="team-member-name">{{ .name }}</h3>
+          <div class="team-member-affiliations">
+            {{ range .affiliations }}
+            <div class="team-member-affiliation">{{ . }}</div>
+            {{ end }}
+          </div>
+          <p class="team-member-role">{{ .role }}</p>
+          {{ if .link }}
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
     {{ if $team.members }}
     <h2 class="team-header">Contributors</h2>
-    <div class="team-grid">
+    <div class="team-grid team-grid--compact">
       {{ range $team.members }}
       <div class="team-member">
         {{ if .link }}
