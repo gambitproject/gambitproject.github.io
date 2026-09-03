@@ -21,7 +21,7 @@ params:
     link: /
   hero:
     title: The package for computation in game theory
-    subtitle: Build, analyse, and explore finite extensive and strategic form games.
+    subtitle: Build, analyse, and explore finite extensive and strategic form games
     image: logos/Gambit_logo_portrait_green_font_outline.png
     buttontext: Get started
     buttonlink: "https://gambitproject.readthedocs.io/en/stable/"
@@ -31,15 +31,15 @@ params:
     software_title: "Open source & free to use"
     software:
       - name: PyGambit
-        description: "Python API providing access to Gambit's features."
+        description: "Python API providing access to Gambit's features"
         icon: python.png
         link: "https://gambitproject.readthedocs.io/en/stable/pygambit.html"
       - name: GUI
-        description: "Visually construct games and investigate their main strategic features."
+        description: "Visually construct games and investigate their main strategic features"
         icon: gui.png
         link: "https://gambitproject.readthedocs.io/en/stable/gui.html"
       - name: CLI
-        description: "Command-line tools suitable for scripting or calling from other programs."
+        description: "Command-line tools suitable for scripting or calling from other programs"
         icon: cli.png
         link: "https://gambitproject.readthedocs.io/en/stable/tools.html"
       # - name: LLM tools
@@ -48,15 +48,15 @@ params:
     whatgambit_title: "Gambit in a nutshell"
     whatgambit:
       - name: Non-cooperative finite games
-        description: "Construct games in extensive or strategic form."
+        description: "Construct games in extensive or strategic form"
       - name: Equilibrium computation
-        description: "Find pure and mixed-strategy Nash equilibria."
+        description: "Find pure and mixed-strategy Nash equilibria"
       - name: Econometric estimation
-        description: "Fit quantal response and other structural models."
+        description: "Fit quantal response and other structural models"
       - name: Interoperable with other tools
         description: "Read and write games in standard file formats."
       - name: Open source & extensible
-        description: "Analyse your game models your way."
+        description: "Analyse your game models your way"
     # testimonials:
     #   - name: "Professor X"
     #     role: "Professor of Game Theory, University of Cambridge"

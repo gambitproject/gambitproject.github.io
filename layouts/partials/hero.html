@@ -29,15 +29,17 @@
                         <div class="latest-release-title">Latest release: <span id="latest-release-version">latest</span></div>
                         <div class="latest-release-date" id="latest-release-date"></div>
                         <ul class="latest-release-links">
-                            <li><a id="latest-release-notes" href="https://github.com/gambitproject/gambit/releases/latest" target="_blank" rel="noopener noreferrer">What's new</a></li>
-                            <li><a href="https://gambitproject.readthedocs.io/en/stable/" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+                            <li>
+                                <a id="latest-release-notes" href="https://github.com/gambitproject/gambit/releases/latest" target="_blank" rel="noopener noreferrer">What's new</a>
+                                <a href="https://gambitproject.readthedocs.io/en/stable/" target="_blank" rel="noopener noreferrer">Documentation</a>
+                            </li>
                             <li>
                                 Download:
                                 <a id="latest-release-source" href="https://github.com/gambitproject/gambit/releases/latest" target="_blank" rel="noopener noreferrer">Source</a>
                                 <a id="latest-release-macos" href="https://github.com/gambitproject/gambit/releases/latest" target="_blank" rel="noopener noreferrer" hidden>macOS</a>
                                 <a id="latest-release-windows" href="https://github.com/gambitproject/gambit/releases/latest" target="_blank" rel="noopener noreferrer" hidden>Windows</a>
-                                <a href="https://pypi.org/project/pygambit/" target="_blank" rel="noopener noreferrer">pip install pygambit</a>
                             </li>
+                            <li>Python: <a href="https://pypi.org/project/pygambit/" target="_blank" rel="noopener noreferrer">pip install pygambit</a></li>
                         </ul>
                     </div>
 
@@ -45,18 +47,21 @@
                     <div class="latest-release dev-release" id="dev-release" hidden>
                         <div class="latest-release-title">
                             <span class="dev-badge" id="dev-release-badge">Preview</span>
-                            Development release: <span id="dev-release-version"></span>
+                            Dev release: <span id="dev-release-version"></span>
                         </div>
                         <div class="latest-release-date" id="dev-release-date"></div>
                         <ul class="latest-release-links">
-                            <li><a id="dev-release-notes" href="https://github.com/gambitproject/gambit/releases" target="_blank" rel="noopener noreferrer">What's new</a></li>
+                            <li>
+                                <a id="dev-release-notes" href="https://github.com/gambitproject/gambit/releases" target="_blank" rel="noopener noreferrer">What's new</a>
+                                <a id="dev-release-docs" href="https://gambitproject.readthedocs.io/en/latest/" target="_blank" rel="noopener noreferrer">Documentation</a>
+                            </li>
                             <li>
                                 Download:
                                 <a id="dev-release-source" href="https://github.com/gambitproject/gambit/releases" target="_blank" rel="noopener noreferrer">Source</a>
                                 <a id="dev-release-macos" href="https://github.com/gambitproject/gambit/releases" target="_blank" rel="noopener noreferrer" hidden>macOS</a>
                                 <a id="dev-release-windows" href="https://github.com/gambitproject/gambit/releases" target="_blank" rel="noopener noreferrer" hidden>Windows</a>
                             </li>
-                            <li><a href="https://pypi.org/project/pygambit/" target="_blank" rel="noopener noreferrer">pip install --pre pygambit</a></li>
+                            <li>Python: <a href="https://pypi.org/project/pygambit/" target="_blank" rel="noopener noreferrer">pip install --pre pygambit</a></li>
                         </ul>
                     </div>
                 </div>
@@ -105,6 +110,7 @@
                         document.getElementById("dev-release-version").textContent = release.tag_name.replace(/^v/, "");
                         document.getElementById("dev-release-date").textContent = "Released " + formatDate(release.published_at);
                         document.getElementById("dev-release-notes").href = release.html_url;
+                        document.getElementById("dev-release-docs").href = "https://gambitproject.readthedocs.io/en/" + release.tag_name + "/";
                         fillAssetLinks("dev-release", release);
                         document.getElementById("dev-release").hidden = false;
                     }
