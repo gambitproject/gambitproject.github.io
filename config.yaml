@@ -26,16 +26,16 @@ params:
     buttontext: Get started
     buttonlink: "https://gambitproject.readthedocs.io/en/stable/"
     description:
-      - "Gambit is a set of software tools for doing computation on finite, noncooperative games in extensive or strategy form and a set of file formats for storing and communicating games to external tools."
-      - "The Gambit Project was founded in the mid-1980s at the California Institute of Technology and to this day is actively developed by a community of contributors, with core development led by [The Alan Turing Institute](https://www.turing.ac.uk) as part of its project: [Automated analysis of strategic interactions](https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions)."
+      - "Gambit is a set of software tools for doing computation on finite, noncooperative games in extensive or strategic form."
+      - "The Gambit Project was founded in the mid-1980s at the California Institute of Technology.  Development of Gambit 17 was generously supported by [The Alan Turing Institute](https://www.turing.ac.uk) as part of [Automated analysis of strategic interactions](https://www.turing.ac.uk/research/research-projects/automated-analysis-strategic-interactions)."
     software_title: "Open source & free to use"
     software:
       - name: PyGambit
-        description: "Python API providing access to Gambit's features"
+        description: "Automate the definition and solution of games at scale"
         icon: python.png
         link: "https://gambitproject.readthedocs.io/en/stable/pygambit.html"
       - name: GUI
-        description: "Visually construct games and investigate their main strategic features"
+        description: "Interactively construct and analyse games"
         icon: gui.png
         link: "https://gambitproject.readthedocs.io/en/stable/gui.html"
       - name: CLI
@@ -54,7 +54,7 @@ params:
       - name: Econometric estimation
         description: "Fit quantal response and other structural models"
       - name: Interoperable with other tools
-        description: "Read and write games in standard file formats."
+        description: "Read and write games in standard file formats"
       - name: Open source & extensible
         description: "Analyse your game models your way"
     # testimonials:
@@ -69,7 +69,7 @@ params:
     #   url: /research/
     # - title: 🚀 Google Summer of Code 🚀 
     #   url: /gsoc_2026/
-    - title: 🚀 Team 🚀
+    - title: Team
       url: /team/
     - title: Install
       url: "https://gambitproject.readthedocs.io/en/stable/install.html"
@@ -89,7 +89,7 @@ params:
           url: "https://www.gambit-project.org/gtdraw"
   team:
     title: "The Gambit Development Team"
-    description: "Gambit is developed and maintained by a core team at The Alan Turing Institute, with contributions from the wider community."
+    # description: "Gambit is developed and maintained by a core team at The Alan Turing Institute, with contributions from the wider community."
     gsoc_contributors:
       title: "2026 Google Summer of Code Contributors"
       members:
@@ -111,44 +111,44 @@ params:
     core_team:
       members:
         - name: "Theodore Turocy"
-          affiliations: 
-            - "The Alan Turing Institute"
+          affiliations:
             - "University of East Anglia"
-          role: "Theme Lead: Game theory and collective decision making in foundational AI research"
+          role: "Professor of Economics"
           image: team/ted.png
           link: "https://tturocy.github.io/"
         - name: "Rahul Savani"
-          affiliations: 
-            - "The Alan Turing Institute"
+          affiliations:
             - "University of Liverpool"
-          role: "Theme lead: Automated Analysis of Strategic Interactions"
+          role: "Professor of Algorithms and Computing Science"
           image: team/rahul.png
-          link: "https://www.turing.ac.uk/people/external-researchers/rahul-savani"
+          link: "https://www.liverpool.ac.uk/people/rahul-savani"
+    core_contributors:
+      members:
+        - name: "Bernhard von Stengel"
+          affiliations:
+            - "London School of Economics"
+          role: "Professor of Mathematics"
+          image: team/Bernhard.jpg
+          link: "http://www.maths.lse.ac.uk/personal/stengel/"
     members:
       - name: "Ed Chalstrey"
-        affiliations:
-          - "The Alan Turing Institute"
-        role: "Research Software Engineer"
+        # affiliations:
+        #  - "The Alan Turing Institute"
+        # role: "Research Software Engineer"
         image: team/ed.png
-        link: "https://edchalstrey.com/"
+        # link: "https://edchalstrey.com/"
       - name: "Daniel Kadnikov"
-        affiliations: 
-          - "The Alan Turing Institute"
-        role: "Research Associate"
+        # affiliations:
+        #  - "The Alan Turing Institute"
+        # role: "Research Associate"
         image: team/daniel.png
-        link: "https://www.turing.ac.uk/people/daniel-kadnikov"
+        # link: "https://www.turing.ac.uk/people/daniel-kadnikov"
       - name: "Stephen Pasteris"
-        affiliations: 
-          - "The Alan Turing Institute"
-        role: "Research Associate"
+        # affiliations:
+        #   - "The Alan Turing Institute"
+        # role: "Research Associate"
         image: team/stephen.jpeg
-        link: "https://ieeexplore.ieee.org/author/37086404209"
-      - name: "Bernhard von Stengel"
-        affiliations:
-          - "London School of Economics"
-        role: "Professor of Mathematics"
-        image: team/Bernhard.jpg
-        link: "http://www.maths.lse.ac.uk/personal/stengel/"
+        # link: "https://ieeexplore.ieee.org/author/37086404209"
       # - name: "Yongzhao Wang"
       #   affiliations: 
       #     - "The Alan Turing Institute"
