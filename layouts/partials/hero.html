@@ -22,7 +22,129 @@
                     {{ . }}
                 </div>
                 {{ end }}
-                
+
+                <!-- Latest release boxes: filled in client-side from the GitHub releases API -->
+                <div class="release-boxes">
+                    <div class="latest-release" id="latest-release">
+                        <div class="latest-release-title">Latest release: <span id="latest-release-version">latest</span></div>
+                        <div class="latest-release-date" id="latest-release-date"></div>
+                        <ul class="latest-release-links">
+                            <li><a id="latest-release-notes" href="https://github.com/gambitproject/gambit/releases/latest" target="_blank" rel="noopener noreferrer">What's new</a></li>
+                            <li><a href="https://gambitproject.readthedocs.io/en/stable/" target="_blank" rel="noopener noreferrer">Documentation</a></li>
+                            <li>
+                                Download:
+                                <a id="latest-release-source" href="https://github.com/gambitproject/gambit/releases/latest" target="_blank" rel="noopener noreferrer">Source</a>
+                                <a id="latest-release-macos" href="https://github.com/gambitproject/gambit/releases/latest" target="_blank" rel="noopener noreferrer" hidden>macOS</a>
+                                <a id="latest-release-windows" href="https://github.com/gambitproject/gambit/releases/latest" target="_blank" rel="noopener noreferrer" hidden>Windows</a>
+                                <a href="https://pypi.org/project/pygambit/" target="_blank" rel="noopener noreferrer">pip install pygambit</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Development (pre-)release box: hidden unless a prerelease is found -->
+                    <div class="latest-release dev-release" id="dev-release" hidden>
+                        <div class="latest-release-title">
+                            <span class="dev-badge" id="dev-release-badge">Preview</span>
+                            Development release: <span id="dev-release-version"></span>
+                        </div>
+                        <div class="latest-release-date" id="dev-release-date"></div>
+                        <ul class="latest-release-links">
+                            <li><a id="dev-release-notes" href="https://github.com/gambitproject/gambit/releases" target="_blank" rel="noopener noreferrer">What's new</a></li>
+                            <li>
+                                Download:
+                                <a id="dev-release-source" href="https://github.com/gambitproject/gambit/releases" target="_blank" rel="noopener noreferrer">Source</a>
+                                <a id="dev-release-macos" href="https://github.com/gambitproject/gambit/releases" target="_blank" rel="noopener noreferrer" hidden>macOS</a>
+                                <a id="dev-release-windows" href="https://github.com/gambitproject/gambit/releases" target="_blank" rel="noopener noreferrer" hidden>Windows</a>
+                            </li>
+                            <li><a href="https://pypi.org/project/pygambit/" target="_blank" rel="noopener noreferrer">pip install --pre pygambit</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+                (function () {
+                    var CACHE_KEY = "gambit-latest-release-v2";
+                    var CACHE_TTL_MS = 6 * 60 * 60 * 1000;
+
+                    function formatDate(isoDate) {
+                        return new Date(isoDate).toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+                    }
+
+                    function fillAssetLinks(prefix, release) {
+                        var assets = release.assets || [];
+                        var source = assets.find(function (a) { return /\.tar\.gz$/.test(a.name); });
+                        if (source) {
+                            document.getElementById(prefix + "-source").href = source.browser_download_url;
+                        }
+                        var macos = assets.find(function (a) { return /\.dmg$/.test(a.name); });
+                        if (macos) {
+                            var macosLink = document.getElementById(prefix + "-macos");
+                            macosLink.href = macos.browser_download_url;
+                            macosLink.hidden = false;
+                        }
+                        var windows = assets.find(function (a) { return /\.msi$/.test(a.name); });
+                        if (windows) {
+                            var windowsLink = document.getElementById(prefix + "-windows");
+                            windowsLink.href = windows.browser_download_url;
+                            windowsLink.hidden = false;
+                        }
+                    }
+
+                    function renderStable(release) {
+                        document.getElementById("latest-release-version").textContent = release.tag_name.replace(/^v/, "");
+                        document.getElementById("latest-release-date").textContent = "Released " + formatDate(release.published_at);
+                        document.getElementById("latest-release-notes").href = release.html_url;
+                        fillAssetLinks("latest-release", release);
+                    }
+
+                    function renderDev(release) {
+                        var STAGE_LABELS = { alpha: "Alpha", beta: "Beta", rc: "Release Candidate" };
+                        var stageMatch = release.tag_name.match(/-(alpha|beta|rc)\b/i);
+                        var badge = stageMatch ? STAGE_LABELS[stageMatch[1].toLowerCase()] : "Preview";
+
+                        document.getElementById("dev-release-badge").textContent = badge;
+                        document.getElementById("dev-release-version").textContent = release.tag_name.replace(/^v/, "");
+                        document.getElementById("dev-release-date").textContent = "Released " + formatDate(release.published_at);
+                        document.getElementById("dev-release-notes").href = release.html_url;
+                        fillAssetLinks("dev-release", release);
+                        document.getElementById("dev-release").hidden = false;
+                    }
+
+                    function render(data) {
+                        if (data.stable) renderStable(data.stable);
+                        if (data.dev) renderDev(data.dev);
+                    }
+
+                    try {
+                        var cached = JSON.parse(localStorage.getItem(CACHE_KEY) || "null");
+                        if (cached && (Date.now() - cached.fetchedAt) < CACHE_TTL_MS) {
+                            render(cached.data);
+                            return;
+                        }
+                    } catch (e) { /* localStorage unavailable or corrupt cache; fall through to fetch */ }
+
+                    fetch("https://api.github.com/repos/gambitproject/gambit/releases?per_page=10")
+                        .then(function (response) {
+                            if (!response.ok) throw new Error("GitHub API error " + response.status);
+                            return response.json();
+                        })
+                        .then(function (releases) {
+                            var published = releases.filter(function (r) { return !r.draft; });
+                            var stable = published.find(function (r) { return !r.prerelease; });
+                            var devCandidate = published.find(function (r) { return r.prerelease; });
+                            var isAheadOfStable = devCandidate && (!stable || new Date(devCandidate.published_at) > new Date(stable.published_at));
+                            var data = {
+                                stable: stable,
+                                dev: isAheadOfStable ? devCandidate : null
+                            };
+                            render(data);
+                            try {
+                                localStorage.setItem(CACHE_KEY, JSON.stringify({ data: data, fetchedAt: Date.now() }));
+                            } catch (e) { /* private browsing or quota exceeded; caching is optional */ }
+                        })
+                        .catch(function () { /* leave the stable box showing its static fallback links */ });
+                })();
+                </script>
+
                 <!-- GitHub Stars and Forks Buttons -->
                 <div class="github-buttons">
                 <a class="github-button" href="https://github.com/gambitproject/gambit" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star gambitproject/gambit on GitHub">Star</a>

@@ -20,7 +20,7 @@
 .hero-title {
    color: var(--color-primary);
    font-weight: bold;
-   font-size: 7em;
+   font-size: 4.5em;
    font-family: "Computer Modern", serif;
    max-width: 100%;
    text-align: center;
@@ -29,7 +29,7 @@
 
 .hero-subtitle {
    color: var(--color-subtitle);
-   font-size: 3em;
+   font-size: 1.8em;
    font-family: "Computer Modern", serif;
    max-width: 100%;
    text-align: center;
@@ -41,11 +41,11 @@
 /* Responsive hero adjustments */
 @media (max-width: 768px) {
    .hero-title {
-      font-size: 3.5em;
+      font-size: 2.75em;
       padding-top: 25px;
    }
    .hero-subtitle {
-      font-size: 1.75em;
+      font-size: 1.3em;
    }
 }
 
@@ -53,6 +53,100 @@
 .github-buttons {
    margin: 20px 0;
    text-align: center;
+}
+
+/* Latest release boxes */
+.release-boxes {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: flex-start;
+   gap: 1.2em;
+   margin-top: 1.5em;
+}
+
+.latest-release {
+   flex: 1 1 22em;
+   max-width: 26em;
+   margin: 0;
+   padding: 0.9em 1.4em;
+   border-radius: 8px;
+   border: 1px solid var(--color-border-light);
+   background: var(--color-white);
+   box-shadow: 0 2px 8px var(--shadow-light);
+   text-align: center;
+}
+
+.latest-release.dev-release {
+   border: 1px dashed var(--colorHighlight, #d99a2b);
+}
+
+.latest-release-title {
+   font-weight: bold;
+   color: var(--color-primary);
+   font-size: 1.15em;
+}
+
+.dev-release .latest-release-title {
+   color: #b3781a;
+}
+
+.dev-badge {
+   display: inline-block;
+   background: var(--colorHighlight, #d99a2b);
+   color: var(--color-white);
+   font-size: 0.65em;
+   font-weight: bold;
+   text-transform: uppercase;
+   letter-spacing: 0.05em;
+   border-radius: 4px;
+   padding: 0.15em 0.5em;
+   margin-right: 0.4em;
+   vertical-align: middle;
+}
+
+.latest-release-date {
+   color: var(--color-text-light);
+   font-size: 0.9em;
+   margin-top: 0.2em;
+}
+
+.latest-release-links {
+   list-style: none;
+   margin: 0.6em 0 0;
+   padding: 0;
+   font-size: 0.95em;
+}
+
+.latest-release-links li {
+   margin-top: 0.3em;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 0.5em;
+}
+
+.latest-release-links a {
+   color: var(--color-primary);
+   text-decoration: none;
+}
+
+.latest-release-links a:hover {
+   text-decoration: underline;
+}
+
+.dev-release .latest-release-links a {
+   color: #b3781a;
+}
+
+@media (max-width: 768px) {
+   .release-boxes {
+      margin-top: 1em;
+   }
+   .latest-release {
+      max-width: 90%;
+      flex-basis: 100%;
+   }
 }
 
 /* Timeline section */
